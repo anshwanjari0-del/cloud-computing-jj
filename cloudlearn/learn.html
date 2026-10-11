@@ -1,0 +1,1085 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Explore 12 comprehensive cloud computing topics with clear definitions, practical examples, key architectural concepts, and summaries. Filter and search topics in real-time.">
+  <meta name="keywords" content="cloud computing topics, IaaS, PaaS, SaaS, virtualization, VPC, cloud storage, IAM, serverless, FinOps">
+  <meta name="author" content="CloudLearn Academy">
+  <title>Cloud Curriculum & Topics | CloudLearn Academy</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- Header / Navigation Bar -->
+  <header class="header" id="site-header">
+    <div class="container nav-container">
+      <a href="index.html" class="logo" aria-label="CloudLearn Home">
+        <div class="logo-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z"></path>
+          </svg>
+        </div>
+        <span>CloudLearn</span>
+        <span class="logo-badge">Academy</span>
+      </a>
+
+      <!-- Desktop Navigation Links -->
+      <nav aria-label="Primary Navigation">
+        <ul class="nav-links">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="learn.html" class="nav-link active">Learn</a></li>
+          <li><a href="learn.html#service-models" class="nav-link">Services</a></li>
+          <li><a href="providers.html" class="nav-link">Providers</a></li>
+          <li><a href="projects.html" class="nav-link">Projects</a></li>
+          <li><a href="quiz.html" class="nav-link">Quiz</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="quiz.html" class="btn btn-outline btn-sm">Test Your Knowledge</a>
+        <button type="button" class="mobile-toggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="mobile-nav-drawer">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="4" y1="8" x2="20" y2="8"></line>
+            <line x1="4" y1="16" x2="20" y2="16"></line>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Menu -->
+  <div class="mobile-nav" id="mobile-nav-drawer" aria-label="Mobile Navigation">
+    <ul class="mobile-nav-links">
+      <li><a href="index.html" class="mobile-nav-link">Home</a></li>
+      <li><a href="learn.html" class="mobile-nav-link active">Learn Topics</a></li>
+      <li><a href="learn.html#service-models" class="mobile-nav-link">Service Models</a></li>
+      <li><a href="providers.html" class="mobile-nav-link">Cloud Providers</a></li>
+      <li><a href="projects.html" class="mobile-nav-link">Hands-On Projects</a></li>
+      <li><a href="quiz.html" class="mobile-nav-link">Knowledge Quiz</a></li>
+    </ul>
+  </div>
+
+  <main id="main-content" class="main-content">
+
+    <!-- Page Header Banner -->
+    <section class="section section-alt" style="padding: 3.5rem 0;" aria-labelledby="page-heading">
+      <div class="container">
+        <div class="section-header text-left" style="margin-bottom: 0;">
+          <div class="section-tag">Comprehensive Syllabus</div>
+          <h1 id="page-heading" class="section-title">Cloud Computing Core Curriculum</h1>
+          <p class="section-subtitle">
+            Explore 12 fundamental topics in cloud computing. Each module features clear definitions, concrete practical examples, key architectural concepts, and concise summaries.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Search & Filter Controls Section -->
+    <section class="section" style="padding-top: 2.5rem; padding-bottom: 5rem;">
+      <div class="container">
+
+        <div class="filter-bar" role="search" aria-label="Topic search and filters">
+          <div class="filter-controls">
+            <!-- Search Bar -->
+            <div class="search-box-wrapper">
+              <svg class="search-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="11" cy="11" r="8"></circle>
+                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+              </svg>
+              <input type="text" id="topicSearch" class="search-input" placeholder="Search by topic, keyword (e.g. 'IaaS', 'VPC', 'Docker', 'IAM', 'FinOps')... Press '/' to focus" aria-label="Search topics">
+              <button type="button" id="searchClearBtn" class="search-clear-btn" aria-label="Clear search input">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="18" y1="6" x2="6" y2="18"></line>
+                  <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+              </button>
+            </div>
+
+            <!-- Category Pills -->
+            <div class="category-pills" role="tablist" aria-label="Filter by category">
+              <button type="button" class="category-pill active" data-category="all" role="tab">All Modules (12)</button>
+              <button type="button" class="category-pill" data-category="fundamentals" role="tab">Fundamentals</button>
+              <button type="button" class="category-pill" data-category="service-models" role="tab">Service & Deployment Models</button>
+              <button type="button" class="category-pill" data-category="architecture" role="tab">Architecture & Compute</button>
+              <button type="button" class="category-pill" data-category="networking-storage" role="tab">Networking & Storage</button>
+              <button type="button" class="category-pill" data-category="security-ops" role="tab">Security & Cost Operations</button>
+            </div>
+
+            <!-- Status and Batch Controls -->
+            <div class="filter-status">
+              <div>
+                Showing <strong id="filterCount">12</strong> of <span id="totalCount">12</span> educational modules
+              </div>
+              <div style="display:flex; gap:0.75rem;">
+                <button type="button" id="expandAllTopics" class="btn btn-secondary btn-sm" style="font-size:0.8rem; padding:0.25rem 0.6rem;">Expand All</button>
+                <button type="button" id="collapseAllTopics" class="btn btn-secondary btn-sm" style="font-size:0.8rem; padding:0.25rem 0.6rem;">Collapse All</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Empty State (Shown when search/filter has 0 matches) -->
+        <div id="emptyState" class="empty-state">
+          <svg class="empty-state-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            <line x1="8" y1="11" x2="14" y2="11"></line>
+          </svg>
+          <h3 class="empty-state-title">No Matching Topics Found</h3>
+          <p class="empty-state-desc">
+            We couldn't find any cloud computing topic matching your current search terms or category filter.
+          </p>
+          <button type="button" id="resetFiltersBtn" class="btn btn-primary btn-sm">Reset All Filters</button>
+        </div>
+
+        <!-- Topics Grid -->
+        <div class="topics-grid" id="topicsContainer">
+
+          <!-- Topic 1: What is Cloud Computing -->
+          <article class="topic-card" data-category="fundamentals" id="topic-definition">
+            <div class="topic-card-header">
+              <div class="topic-meta">
+                <span class="topic-badge">Fundamentals</span>
+                <span class="topic-number">Module 01</span>
+              </div>
+              <h2 class="topic-title">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color:var(--color-primary); flex-shrink:0;">
+                  <path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z"></path>
+                </svg>
+                What is Cloud Computing?
+              </h2>
+            </div>
+            <div class="topic-card-body">
+              <div class="content-block">
+                <div class="content-block-title">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
+                  Definition
+                </div>
+                <p class="content-block-text">
+                  Cloud computing is the on-demand delivery of computing services—including servers, storage, databases, networking, software, and analytics—over the internet ("the cloud") with pay-as-you-go pricing, eliminating the need to own and maintain physical data centers.
+                </p>
+              </div>
+
+              <div class="content-block">
+                <div class="content-block-title">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg>
+                  Practical Example
+                </div>
+                <p class="content-block-text">
+                  Instead of purchasing physical servers and renting air-conditioned colocation rack space to run a new mobile application, a startup launches two virtual servers on AWS or Azure in five minutes, paying only for the exact compute minutes their users consume.
+                </p>
+              </div>
+
+              <div>
+                <div class="content-block-title">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+                  Key Concepts
+                </div>
+                <ul class="key-concepts-list">
+                  <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> <strong>On-Demand Self-Service:</strong> Instant resource provisioning without manual vendor intervention.</li>
+                  <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> <strong>Broad Network Access:</strong> Capabilities accessible across standard internet protocols on any client device.</li>
+                  <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> <strong>Resource Pooling:</strong> Provider compute resources pooled to serve multi-tenant customers dynamically.</li>
+                </ul>
+              </div>
+
+              <div class="content-block" style="background-color: var(--color-bg-subtle); border-color: var(--color-primary-border);">
+                <div class="content-block-title" style="color:var(--color-primary);">Summary</div>
+                <p class="content-block-text">
+                  Cloud computing shifts computing from a fixed physical asset to a flexible utility, granting individuals and global enterprises alike instant access to enterprise-grade infrastructure.
+                </p>
+              </div>
+            </div>
+
+            <!-- Expandable Deep Dive -->
+            <div class="topic-expandable" id="expandable-1">
+              <h4 style="font-size:1rem; margin-bottom:0.5rem; color:var(--color-navy-dark);">Deep Dive: The Utility Computing Paradigm</h4>
+              <p style="font-size:0.9rem; margin-bottom:0.75rem;">
+                Just as modern households plug appliances into the electrical grid without building their own power generators, modern software teams consume compute and storage through standardized APIs without maintaining physical diesel backups, cooling chillers, or fiber-optic patches.
+              </p>
+              <div style="font-size:0.85rem; color:var(--color-text-muted);">
+                <strong>Reference Standard:</strong> National Institute of Standards and Technology (NIST SP 800-145).
+              </div>
+            </div>
+
+            <div class="topic-card-footer">
+              <button type="button" class="topic-toggle-btn" aria-expanded="false" aria-controls="expandable-1">
+                <span>View In-Depth Guide</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+              </button>
+            </div>
+          </article>
+
+          <!-- Topic 2: History and Evolution -->
+          <article class="topic-card" data-category="fundamentals" id="topic-history">
+            <div class="topic-card-header">
+              <div class="topic-meta">
+                <span class="topic-badge">Fundamentals</span>
+                <span class="topic-number">Module 02</span>
+              </div>
+              <h2 class="topic-title">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color:var(--color-primary); flex-shrink:0;">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <polyline points="12 6 12 12 14 14"></polyline>
+                </svg>
+                History & Evolution of Cloud
+              </h2>
+            </div>
+            <div class="topic-card-body">
+              <div class="content-block">
+                <div class="content-block-title">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
+                  Definition
+                </div>
+                <p class="content-block-text">
+                  The evolution of computing from massive centralized mainframes with time-sharing in the 1960s, through client-server architectures, grid computing, and hardware virtualization in the late 1990s, culminating in modern on-demand public cloud platforms in the mid-2000s.
+                </p>
+              </div>
+
+              <div class="content-block">
+                <div class="content-block-title">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg>
+                  Practical Example
+                </div>
+                <p class="content-block-text">
+                  In 1999, Salesforce pioneered delivering business software purely via browser (SaaS). In 2006, Amazon launched AWS with Simple Storage Service (S3) and Elastic Compute Cloud (EC2), allowing developers to programmatically rent raw server compute via REST APIs for pennies per hour.
+                </p>
+              </div>
+
+              <div>
+                <div class="content-block-title">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+                  Key Concepts
+                </div>
+                <ul class="key-concepts-list">
+                  <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> <strong>Mainframes & Time-Sharing (1960s):</strong> John McCarthy envisioned computation organized as a public utility.</li>
+                  <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> <strong>Virtualization Breakthrough (late 1990s):</strong> VMware and Xen enabled multiple operating systems on one server.</li>
+                  <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> <strong>Commercial Public Hyperscalers (2006–Present):</strong> AWS launch (2006), Google App Engine (2008), Microsoft Azure (2010).</li>
+                </ul>
+              </div>
+
+              <div class="content-block" style="background-color: var(--color-bg-subtle); border-color: var(--color-primary-border);">
+                <div class="content-block-title" style="color:var(--color-primary);">Summary</div>
+                <p class="content-block-text">
+                  Cloud computing is not a sudden accident, but a six-decade technological convergence of time-sharing, high-speed broadband, hardware virtualization, and automation.
+                </p>
+              </div>
+            </div>
+
+            <div class="topic-expandable" id="expandable-2">
+              <h4 style="font-size:1rem; margin-bottom:0.5rem; color:var(--color-navy-dark);">Deep Dive: The Shift from Bare-Metal to Cloud-Native</h4>
+              <p style="font-size:0.9rem; margin-bottom:0.75rem;">
+                Prior to cloud computing, launching a software product required forecasting capacity 6-12 months in advance, placing hardware purchase orders, racking machines, and paying high capital expenses. Today, infrastructure is defined purely as software code (Infrastructure as Code).
+              </p>
+            </div>
+
+            <div class="topic-card-footer">
+              <button type="button" class="topic-toggle-btn" aria-expanded="false" aria-controls="expandable-2">
+                <span>View In-Depth Guide</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+              </button>
+            </div>
+          </article>
+
+          <!-- Topic 3: Characteristics and Benefits -->
+          <article class="topic-card" data-category="fundamentals" id="topic-characteristics">
+            <div class="topic-card-header">
+              <div class="topic-meta">
+                <span class="topic-badge">Fundamentals</span>
+                <span class="topic-number">Module 03</span>
+              </div>
+              <h2 class="topic-title">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color:var(--color-primary); flex-shrink:0;">
+                  <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                </svg>
+                Characteristics & Benefits of Cloud
+              </h2>
+            </div>
+            <div class="topic-card-body">
+              <div class="content-block">
+                <div class="content-block-title">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
+                  Definition
+                </div>
+                <p class="content-block-text">
+                  The NIST specification defines five essential characteristics of cloud computing (on-demand self-service, broad network access, resource pooling, rapid elasticity, and measured service) that deliver tangible business benefits like agility, reliability, and cost-efficiency.
+                </p>
+              </div>
+
+              <div class="content-block">
+                <div class="content-block-title">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg>
+                  Practical Example
+                </div>
+                <p class="content-block-text">
+                  An e-commerce website experiences a 10x traffic spike on Black Friday. Thanks to <em>rapid elasticity</em> and <em>measured service</em>, auto-scaling automatically spins up 20 additional server instances for six hours and terminates them afterwards, paying only for those exact active hours.
+                </p>
+              </div>
+
+              <div>
+                <div class="content-block-title">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+                  Key Concepts
+                </div>
+                <ul class="key-concepts-list">
+                  <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> <strong>Rapid Elasticity:</strong> Capabilities can be elastically provisioned and released to scale out and in.</li>
+                  <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> <strong>Measured Service:</strong> Resource usage is monitored, controlled, and reported transparently.</li>
+                  <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> <strong>Global Reliability:</strong> Multi-region replication safeguards uptime against localized natural disasters.</li>
+                </ul>
+              </div>
+
+              <div class="content-block" style="background-color: var(--color-bg-subtle); border-color: var(--color-primary-border);">
+                <div class="content-block-title" style="color:var(--color-primary);">Summary</div>
+                <p class="content-block-text">
+                  The NIST characteristics distinguish genuine cloud computing from traditional shared hosting by guaranteeing elasticity, automated measurement, and on-demand provisioning.
+                </p>
+              </div>
+            </div>
+
+            <div class="topic-expandable" id="expandable-3">
+              <h4 style="font-size:1rem; margin-bottom:0.5rem; color:var(--color-navy-dark);">Deep Dive: The 5 Essential NIST Characteristics</h4>
+              <p style="font-size:0.9rem; margin-bottom:0.75rem;">
+                If a system requires an email ticket or human approval to allocate a virtual server, or charges a flat monthly fee regardless of actual consumption, it does not fully meet the strict NIST cloud definition.
+              </p>
+            </div>
+
+            <div class="topic-card-footer">
+              <button type="button" class="topic-toggle-btn" aria-expanded="false" aria-controls="expandable-3">
+                <span>View In-Depth Guide</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+              </button>
+            </div>
+          </article>
+
+          <!-- Topic 4: Deployment Models -->
+          <article class="topic-card" data-category="service-models" id="topic-deployment-models">
+            <div class="topic-card-header">
+              <div class="topic-meta">
+                <span class="topic-badge">Deployment Models</span>
+                <span class="topic-number">Module 04</span>
+              </div>
+              <h2 class="topic-title">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color:var(--color-primary); flex-shrink:0;">
+                  <path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"></path>
+                  <line x1="4" y1="22" x2="4" y2="15"></line>
+                </svg>
+                Public, Private, Hybrid & Community Cloud
+              </h2>
+            </div>
+            <div class="topic-card-body">
+              <div class="content-block">
+                <div class="content-block-title">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
+                  Definition
+                </div>
+                <p class="content-block-text">
+                  Cloud deployment models categorize where infrastructure is physically hosted and who has exclusive access to it: open public hyperscalers, dedicated private infrastructure, connected hybrid setups, or shared community consortia.
+                </p>
+              </div>
+
+              <div class="content-block">
+                <div class="content-block-title">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg>
+                  Practical Example
+                </div>
+                <p class="content-block-text">
+                  A commercial healthcare network stores sensitive patient health records on a HIPAA-compliant private cloud within their own data center, while hosting their public patient education portal on a public cloud like AWS to leverage global content delivery networks.
+                </p>
+              </div>
+
+              <div>
+                <div class="content-block-title">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+                  Key Concepts
+                </div>
+                <ul class="key-concepts-list">
+                  <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> <strong>Public Cloud:</strong> Multi-tenant infrastructure owned by third-party providers (AWS, Azure, GCP).</li>
+                  <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> <strong>Private Cloud:</strong> Single-tenant infrastructure exclusively operated for one organization.</li>
+                  <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> <strong>Hybrid Cloud:</strong> Seamless orchestration between private on-premises and public cloud resources.</li>
+                  <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> <strong>Community Cloud:</strong> Shared infrastructure among organizations with common mission or regulatory standards.</li>
+                </ul>
+              </div>
+
+              <div class="content-block" style="background-color: var(--color-bg-subtle); border-color: var(--color-primary-border);">
+                <div class="content-block-title" style="color:var(--color-primary);">Summary</div>
+                <p class="content-block-text">
+                  Selecting the proper deployment model hinges on regulatory compliance, data residency laws, legacy hardware investments, and performance requirements.
+                </p>
+              </div>
+            </div>
+
+            <div class="topic-expandable" id="expandable-4">
+              <h4 style="font-size:1rem; margin-bottom:0.5rem; color:var(--color-navy-dark);">Deep Dive: Direct Cloud Interconnects</h4>
+              <p style="font-size:0.9rem; margin-bottom:0.75rem;">
+                Hybrid cloud architectures frequently rely on dedicated private fiber circuits (such as AWS Direct Connect or Azure ExpressRoute) rather than public internet tunnels to achieve sub-millisecond latencies and high throughput between enterprise data centers and the cloud.
+              </p>
+            </div>
+
+            <div class="topic-card-footer">
+              <button type="button" class="topic-toggle-btn" aria-expanded="false" aria-controls="expandable-4">
+                <span>View In-Depth Guide</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+              </button>
+            </div>
+          </article>
+
+          <!-- Topic 5: IaaS, PaaS, SaaS -->
+          <article class="topic-card" data-category="service-models" id="topic-service-models">
+            <div class="topic-card-header">
+              <div class="topic-meta">
+                <span class="topic-badge">Service Models</span>
+                <span class="topic-number">Module 05</span>
+              </div>
+              <h2 class="topic-title">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color:var(--color-primary); flex-shrink:0;">
+                  <rect x="2" y="2" width="20" height="8" rx="2" ry="2"></rect>
+                  <rect x="2" y="14" width="20" height="8" rx="2" ry="2"></rect>
+                  <line x1="6" y1="6" x2="6.01" y2="6"></line>
+                  <line x1="6" y1="18" x2="6.01" y2="18"></line>
+                </svg>
+                IaaS, PaaS, and SaaS (Service Models)
+              </h2>
+            </div>
+            <div class="topic-card-body">
+              <div class="content-block">
+                <div class="content-block-title">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
+                  Definition
+                </div>
+                <p class="content-block-text">
+                  The three primary cloud service delivery layers representing varying levels of abstraction: Infrastructure as a Service (raw compute/network), Platform as a Service (managed application runtimes), and Software as a Service (end-user ready applications).
+                </p>
+              </div>
+
+              <div class="content-block">
+                <div class="content-block-title">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg>
+                  Practical Example
+                </div>
+                <p class="content-block-text">
+                  <strong>IaaS:</strong> You rent an Amazon EC2 instance and configure Ubuntu OS, Nginx, and Python yourself. <br>
+                  <strong>PaaS:</strong> You push code to Google App Engine or AWS Elastic Beanstalk; the cloud configures the runtime automatically. <br>
+                  <strong>SaaS:</strong> You log in to Google Workspace or Dropbox to work directly without writing any code.
+                </p>
+              </div>
+
+              <div>
+                <div class="content-block-title">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+                  Key Concepts
+                </div>
+                <ul class="key-concepts-list">
+                  <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> <strong>IaaS (Infrastructure as a Service):</strong> Maximum control over OS, kernel parameters, and networking.</li>
+                  <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> <strong>PaaS (Platform as a Service):</strong> Focus solely on code; cloud provider manages OS patches and scaling.</li>
+                  <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> <strong>SaaS (Software as a Service):</strong> Turnkey cloud software consumed via web browsers and mobile apps.</li>
+                  <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> <strong>Shared Responsibility Model:</strong> Customer responsibilities decrease as you move from IaaS to PaaS to SaaS.</li>
+                </ul>
+              </div>
+
+              <div class="content-block" style="background-color: var(--color-bg-subtle); border-color: var(--color-primary-border);">
+                <div class="content-block-title" style="color:var(--color-primary);">Summary</div>
+                <p class="content-block-text">
+                  Choose IaaS for complete operational control, PaaS for accelerated developer productivity, and SaaS for ready-to-use business software.
+                </p>
+              </div>
+            </div>
+
+            <div class="topic-expandable" id="expandable-5">
+              <h4 style="font-size:1rem; margin-bottom:0.5rem; color:var(--color-navy-dark);">Deep Dive: The Shared Responsibility Division</h4>
+              <p style="font-size:0.9rem; margin-bottom:0.75rem;">
+                In IaaS, the customer must apply security patches to the guest operating system. In PaaS, the provider patches the OS and language runtime. In SaaS, the provider manages the entire application, leaving only data access management to the customer.
+              </p>
+            </div>
+
+            <div class="topic-card-footer">
+              <button type="button" class="topic-toggle-btn" aria-expanded="false" aria-controls="expandable-5">
+                <span>View In-Depth Guide</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+              </button>
+            </div>
+          </article>
+
+          <!-- Topic 6: Virtualization & Containers -->
+          <article class="topic-card" data-category="architecture" id="topic-virtualization">
+            <div class="topic-card-header">
+              <div class="topic-meta">
+                <span class="topic-badge">Architecture</span>
+                <span class="topic-number">Module 06</span>
+              </div>
+              <h2 class="topic-title">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color:var(--color-primary); flex-shrink:0;">
+                  <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
+                  <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
+                  <line x1="12" y1="22.08" x2="12" y2="12"></line>
+                </svg>
+                Virtualization & Containers
+              </h2>
+            </div>
+            <div class="topic-card-body">
+              <div class="content-block">
+                <div class="content-block-title">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
+                  Definition
+                </div>
+                <p class="content-block-text">
+                  Virtualization is the abstraction of physical hardware using hypervisors to create multiple isolated Virtual Machines (VMs). Containerization takes abstraction further by isolating processes at the operating system level, sharing a single host kernel for ultra-fast, lightweight deployments.
+                </p>
+              </div>
+
+              <div class="content-block">
+                <div class="content-block-title">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg>
+                  Practical Example
+                </div>
+                <p class="content-block-text">
+                  A Virtual Machine takes 60 seconds to boot a full Windows Server guest OS (taking 20 GB of disk space). In contrast, a Docker container running a microservice starts in 200 milliseconds, packages only application binaries and dependencies, and consumes just 150 MB.
+                </p>
+              </div>
+
+              <div>
+                <div class="content-block-title">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+                  Key Concepts
+                </div>
+                <ul class="key-concepts-list">
+                  <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> <strong>Type-1 (Bare-Metal) Hypervisors:</strong> Run directly on physical server hardware (e.g. VMware ESXi, KVM).</li>
+                  <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> <strong>Containers (OCI / Docker):</strong> Package code + libraries while sharing the host OS kernel via Linux namespaces & cgroups.</li>
+                  <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> <strong>Container Orchestration:</strong> Kubernetes (K8s) automates deployment, scaling, and self-healing across container clusters.</li>
+                </ul>
+              </div>
+
+              <div class="content-block" style="background-color: var(--color-bg-subtle); border-color: var(--color-primary-border);">
+                <div class="content-block-title" style="color:var(--color-primary);">Summary</div>
+                <p class="content-block-text">
+                  Virtual Machines provide strong hardware isolation for legacy and multi-OS workloads, while containers provide rapid portability and density for cloud-native microservices.
+                </p>
+              </div>
+            </div>
+
+            <div class="topic-expandable" id="expandable-6">
+              <h4 style="font-size:1rem; margin-bottom:0.5rem; color:var(--color-navy-dark);">Deep Dive: Modern Firecracker & MicroVMs</h4>
+              <p style="font-size:0.9rem; margin-bottom:0.75rem;">
+                Modern cloud providers combine the security isolation of VMs with the sub-second boot speed of containers using lightweight microVM technologies like AWS Firecracker, powering serverless runtimes like AWS Lambda and Fargate.
+              </p>
+            </div>
+
+            <div class="topic-card-footer">
+              <button type="button" class="topic-toggle-btn" aria-expanded="false" aria-controls="expandable-6">
+                <span>View In-Depth Guide</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+              </button>
+            </div>
+          </article>
+
+          <!-- Topic 7: Storage and Databases -->
+          <article class="topic-card" data-category="networking-storage" id="topic-storage">
+            <div class="topic-card-header">
+              <div class="topic-meta">
+                <span class="topic-badge">Storage & Data</span>
+                <span class="topic-number">Module 07</span>
+              </div>
+              <h2 class="topic-title">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color:var(--color-primary); flex-shrink:0;">
+                  <ellipse cx="12" cy="5" rx="9" ry="3"></ellipse>
+                  <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path>
+                  <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path>
+                </svg>
+                Cloud Storage & Managed Databases
+              </h2>
+            </div>
+            <div class="topic-card-body">
+              <div class="content-block">
+                <div class="content-block-title">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
+                  Definition
+                </div>
+                <p class="content-block-text">
+                  Cloud storage encompasses specialized tiers for data persistence—Object, Block, and File storage—paired with fully managed relational (SQL) and non-relational (NoSQL) database engines featuring automated backups, clustering, and scaling.
+                </p>
+              </div>
+
+              <div class="content-block">
+                <div class="content-block-title">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg>
+                  Practical Example
+                </div>
+                <p class="content-block-text">
+                  A video streaming platform stores terabytes of raw MP4 video files in AWS S3 or Google Cloud Storage (Object Storage), mounts an NVMe SSD volume (Block Storage) to its encoding servers for scratch performance, and queries subscriber profiles in Amazon DynamoDB (NoSQL).
+                </p>
+              </div>
+
+              <div>
+                <div class="content-block-title">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+                  Key Concepts
+                </div>
+                <ul class="key-concepts-list">
+                  <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> <strong>Object Storage:</strong> Flat address space accessed via HTTP REST APIs (AWS S3, Azure Blob). 99.999999999% durability.</li>
+                  <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> <strong>Block Storage:</strong> High-performance virtual disks attached to individual VMs (AWS EBS, Azure Managed Disk).</li>
+                  <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> <strong>File Storage:</strong> Shared network filesystem accessible simultaneously by multiple servers (NFS/SMB, AWS EFS).</li>
+                  <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> <strong>Relational vs NoSQL:</strong> ACID-compliant SQL (RDS, Cloud SQL) vs horizontally scalable key-value/document stores (DynamoDB, Cosmos DB).</li>
+                </ul>
+              </div>
+
+              <div class="content-block" style="background-color: var(--color-bg-subtle); border-color: var(--color-primary-border);">
+                <div class="content-block-title" style="color:var(--color-primary);">Summary</div>
+                <p class="content-block-text">
+                  Match storage types to application I/O patterns: Object storage for static media and data lakes, Block storage for OS drives, and Managed databases for transaction processing.
+                </p>
+              </div>
+            </div>
+
+            <div class="topic-expandable" id="expandable-7">
+              <h4 style="font-size:1rem; margin-bottom:0.5rem; color:var(--color-navy-dark);">Deep Dive: The 11 Nines of Durability</h4>
+              <p style="font-size:0.9rem; margin-bottom:0.75rem;">
+                Cloud object storage systems like S3 automatically replicate data across at least three geographically separated availability zones within a region, yielding an engineered annual durability of 99.999999999% (if you store 10,000,000 objects, you would expect to lose one every 10,000 years).
+              </p>
+            </div>
+
+            <div class="topic-card-footer">
+              <button type="button" class="topic-toggle-btn" aria-expanded="false" aria-controls="expandable-7">
+                <span>View In-Depth Guide</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+              </button>
+            </div>
+          </article>
+
+          <!-- Topic 8: Cloud Networking -->
+          <article class="topic-card" data-category="networking-storage" id="topic-networking">
+            <div class="topic-card-header">
+              <div class="topic-meta">
+                <span class="topic-badge">Networking</span>
+                <span class="topic-number">Module 08</span>
+              </div>
+              <h2 class="topic-title">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color:var(--color-primary); flex-shrink:0;">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <line x1="2" y1="12" x2="22" y2="12"></line>
+                  <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+                </svg>
+                Cloud Networking & VPC Architecture
+              </h2>
+            </div>
+            <div class="topic-card-body">
+              <div class="content-block">
+                <div class="content-block-title">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
+                  Definition
+                </div>
+                <p class="content-block-text">
+                  Software-Defined Networking (SDN) in the cloud enables users to construct isolated virtual networks (VPC or VNet), define private Classless Inter-Domain Routing (CIDR) blocks, route internet traffic via gateways, and balance global user requests using CDNs.
+                </p>
+              </div>
+
+              <div class="content-block">
+                <div class="content-block-title">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg>
+                  Practical Example
+                </div>
+                <p class="content-block-text">
+                  A bank places its web load balancer in a public subnet with an Internet Gateway, but strictly places its payment database in an isolated private subnet with no public IP, reachable only by internal application servers via strict Security Group rules.
+                </p>
+              </div>
+
+              <div>
+                <div class="content-block-title">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+                  Key Concepts
+                </div>
+                <ul class="key-concepts-list">
+                  <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> <strong>Virtual Private Cloud (VPC):</strong> Logically partitioned private virtual network in your cloud tenant.</li>
+                  <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> <strong>Public vs Private Subnets:</strong> Public subnets route directly to an Internet Gateway; private subnets use NAT for egress only.</li>
+                  <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> <strong>Security Groups & NACLs:</strong> Stateful virtual firewalls at the instance level vs stateless filters at the subnet level.</li>
+                  <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> <strong>Content Delivery Network (CDN):</strong> Globally distributed edge points of presence caching static assets close to end users.</li>
+                </ul>
+              </div>
+
+              <div class="content-block" style="background-color: var(--color-bg-subtle); border-color: var(--color-primary-border);">
+                <div class="content-block-title" style="color:var(--color-primary);">Summary</div>
+                <p class="content-block-text">
+                  VPC architecture forms the perimeter and backbone of cloud security. Isolating workloads into segmented subnets protects internal databases from direct public exposure.
+                </p>
+              </div>
+            </div>
+
+            <div class="topic-expandable" id="expandable-8">
+              <h4 style="font-size:1rem; margin-bottom:0.5rem; color:var(--color-navy-dark);">Deep Dive: CIDR Block Sizing</h4>
+              <p style="font-size:0.9rem; margin-bottom:0.75rem;">
+                Standard cloud VPCs typically use private RFC 1918 address space, such as <code>10.0.0.0/16</code> (providing 65,536 IP addresses). Subnets are typically divided into <code>/24</code> blocks (256 addresses each), spanning distinct Availability Zones for redundancy.
+              </p>
+            </div>
+
+            <div class="topic-card-footer">
+              <button type="button" class="topic-toggle-btn" aria-expanded="false" aria-controls="expandable-8">
+                <span>View In-Depth Guide</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+              </button>
+            </div>
+          </article>
+
+          <!-- Topic 9: Security and IAM -->
+          <article class="topic-card" data-category="security-ops" id="topic-security">
+            <div class="topic-card-header">
+              <div class="topic-meta">
+                <span class="topic-badge">Security</span>
+                <span class="topic-number">Module 09</span>
+              </div>
+              <h2 class="topic-title">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color:var(--color-primary); flex-shrink:0;">
+                  <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                  <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                </svg>
+                Security, Identity & Access Management (IAM)
+              </h2>
+            </div>
+            <div class="topic-card-body">
+              <div class="content-block">
+                <div class="content-block-title">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
+                  Definition
+                </div>
+                <p class="content-block-text">
+                  The foundational framework and policies ensuring that authorized identities (human operators and software services) have precisely the granular access permissions necessary to perform their duties, rooted in Zero Trust and Least Privilege principles.
+                </p>
+              </div>
+
+              <div class="content-block">
+                <div class="content-block-title">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg>
+                  Practical Example
+                </div>
+                <p class="content-block-text">
+                  Rather than embedding permanent AWS secret keys into web server code, developers assign an IAM Role to the virtual machine. The cloud provider automatically injects short-lived, rotatable temporary security tokens with permissions restricted strictly to reading from one specific S3 bucket.
+                </p>
+              </div>
+
+              <div>
+                <div class="content-block-title">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+                  Key Concepts
+                </div>
+                <ul class="key-concepts-list">
+                  <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> <strong>Principle of Least Privilege (PoLP):</strong> Granting only the bare minimum permissions required for a role.</li>
+                  <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> <strong>Multi-Factor Authentication (MFA):</strong> Mandatory second-factor verification protecting root and privileged user accounts.</li>
+                  <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> <strong>Encryption at Rest & in Transit:</strong> Encrypting stored databases via KMS (AES-256) and TLS 1.3 for in-flight requests.</li>
+                  <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> <strong>Audit Logging:</strong> Immutable API tracking (AWS CloudTrail, Azure Activity Log) recording who made every API call.</li>
+                </ul>
+              </div>
+
+              <div class="content-block" style="background-color: var(--color-bg-subtle); border-color: var(--color-primary-border);">
+                <div class="content-block-title" style="color:var(--color-primary);">Summary</div>
+                <p class="content-block-text">
+                  In cloud computing, identity is the new security perimeter. Strict IAM policies combined with continuous audit logging prevent unauthorized privilege escalation and data exfiltration.
+                </p>
+              </div>
+            </div>
+
+            <div class="topic-expandable" id="expandable-9">
+              <h4 style="font-size:1rem; margin-bottom:0.5rem; color:var(--color-navy-dark);">Deep Dive: Never Use Root Credentials for Daily Work</h4>
+              <p style="font-size:0.9rem; margin-bottom:0.75rem;">
+                Every major cloud provider strongly advises locking away account root credentials behind a physical hardware MFA key immediately upon creation, conducting all administrative tasks via federated Single Sign-On (SSO) roles.
+              </p>
+            </div>
+
+            <div class="topic-card-footer">
+              <button type="button" class="topic-toggle-btn" aria-expanded="false" aria-controls="expandable-9">
+                <span>View In-Depth Guide</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+              </button>
+            </div>
+          </article>
+
+          <!-- Topic 10: Scalability, Elasticity, HA -->
+          <article class="topic-card" data-category="architecture" id="topic-scalability">
+            <div class="topic-card-header">
+              <div class="topic-meta">
+                <span class="topic-badge">Architecture</span>
+                <span class="topic-number">Module 10</span>
+              </div>
+              <h2 class="topic-title">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color:var(--color-primary); flex-shrink:0;">
+                  <polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline>
+                  <polyline points="17 6 23 6 23 12"></polyline>
+                </svg>
+                Scalability, Elasticity & High Availability
+              </h2>
+            </div>
+            <div class="topic-card-body">
+              <div class="content-block">
+                <div class="content-block-title">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
+                  Definition
+                </div>
+                <p class="content-block-text">
+                  The architectural capability of a system to handle increased load by adjusting resources (scalability), dynamically adapt to changing demand in real-time (elasticity), and remain fully operational without interruption despite hardware or facility failures (high availability).
+                </p>
+              </div>
+
+              <div class="content-block">
+                <div class="content-block-title">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg>
+                  Practical Example
+                </div>
+                <p class="content-block-text">
+                  A news website distributes its application servers across three separate Availability Zones behind an Application Load Balancer. If a lightning strike knocks out one entire data center facility, health checks automatically divert 100% of traffic to surviving zones without dropping a single visitor request.
+                </p>
+              </div>
+
+              <div>
+                <div class="content-block-title">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+                  Key Concepts
+                </div>
+                <ul class="key-concepts-list">
+                  <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> <strong>Vertical Scaling (Scale-Up):</strong> Adding more CPU/RAM to an existing instance (has physical hardware ceilings).</li>
+                  <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> <strong>Horizontal Scaling (Scale-Out):</strong> Adding more identical stateless instances in parallel (virtually unlimited).</li>
+                  <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> <strong>Elastic Auto-Scaling:</strong> Target-tracking policies that automatically spin instances up and down on CPU/request metrics.</li>
+                  <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> <strong>High Availability (HA):</strong> Achieving 99.99% ("four nines") uptime through redundant, geographically separated nodes.</li>
+                </ul>
+              </div>
+
+              <div class="content-block" style="background-color: var(--color-bg-subtle); border-color: var(--color-primary-border);">
+                <div class="content-block-title" style="color:var(--color-primary);">Summary</div>
+                <p class="content-block-text">
+                  Design for failure: build stateless application tiers that scale horizontally across multiple availability zones to withstand component breakdowns gracefully.
+                </p>
+              </div>
+            </div>
+
+            <div class="topic-expandable" id="expandable-10">
+              <h4 style="font-size:1rem; margin-bottom:0.5rem; color:var(--color-navy-dark);">Deep Dive: RPO and RTO in Disaster Recovery</h4>
+              <p style="font-size:0.9rem; margin-bottom:0.75rem;">
+                High availability architectures are guided by two fundamental metrics: <strong>Recovery Point Objective (RPO)</strong> (the maximum acceptable data loss in minutes/hours) and <strong>Recovery Time Objective (RTO)</strong> (the maximum acceptable downtime duration).
+              </p>
+            </div>
+
+            <div class="topic-card-footer">
+              <button type="button" class="topic-toggle-btn" aria-expanded="false" aria-controls="expandable-10">
+                <span>View In-Depth Guide</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+              </button>
+            </div>
+          </article>
+
+          <!-- Topic 11: Serverless Computing -->
+          <article class="topic-card" data-category="architecture" id="topic-serverless">
+            <div class="topic-card-header">
+              <div class="topic-meta">
+                <span class="topic-badge">Modern Cloud</span>
+                <span class="topic-number">Module 11</span>
+              </div>
+              <h2 class="topic-title">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color:var(--color-primary); flex-shrink:0;">
+                  <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+                </svg>
+                Serverless Computing & FaaS
+              </h2>
+            </div>
+            <div class="topic-card-body">
+              <div class="content-block">
+                <div class="content-block-title">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
+                  Definition
+                </div>
+                <p class="content-block-text">
+                  An execution model where the cloud provider dynamically manages the allocation, provisioning, and scaling of servers. Code runs in stateless compute containers triggered by events, and organizations pay zero dollars when no code is actively executing.
+                </p>
+              </div>
+
+              <div class="content-block">
+                <div class="content-block-title">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg>
+                  Practical Example
+                </div>
+                <p class="content-block-text">
+                  Whenever a user uploads an avatar image to an S3 bucket, an event triggers an AWS Lambda function. The function resizes the picture to thumbnail dimensions in 45 milliseconds and saves it. The cost for processing 10,000 images is less than two cents.
+                </p>
+              </div>
+
+              <div>
+                <div class="content-block-title">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+                  Key Concepts
+                </div>
+                <ul class="key-concepts-list">
+                  <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> <strong>Function as a Service (FaaS):</strong> Ephemeral micro-functions (AWS Lambda, Azure Functions, Google Cloud Functions).</li>
+                  <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> <strong>Event-Driven Triggers:</strong> HTTP requests via API Gateway, database mutations, message queues, or scheduled cron timers.</li>
+                  <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> <strong>Zero Idle Billing:</strong> You never pay for server idle time; billing is metered in 1ms runtime increments.</li>
+                  <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> <strong>Cold Starts:</strong> Initial latency penalty when a function container is initialized from an idle state.</li>
+                </ul>
+              </div>
+
+              <div class="content-block" style="background-color: var(--color-bg-subtle); border-color: var(--color-primary-border);">
+                <div class="content-block-title" style="color:var(--color-primary);">Summary</div>
+                <p class="content-block-text">
+                  Serverless does not mean there are no servers; it means developers are completely freed from server maintenance, focusing 100% on business application logic.
+                </p>
+              </div>
+            </div>
+
+            <div class="topic-expandable" id="expandable-11">
+              <h4 style="font-size:1rem; margin-bottom:0.5rem; color:var(--color-navy-dark);">Deep Dive: Serverless Containers (Cloud Run & Fargate)</h4>
+              <p style="font-size:0.9rem; margin-bottom:0.75rem;">
+                Serverless has expanded beyond single code snippets into entire container workloads. Services like Google Cloud Run and AWS Fargate allow developers to run standard Docker containers serverlessly, automatically scaling to zero when traffic stops.
+              </p>
+            </div>
+
+            <div class="topic-card-footer">
+              <button type="button" class="topic-toggle-btn" aria-expanded="false" aria-controls="expandable-11">
+                <span>View In-Depth Guide</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+              </button>
+            </div>
+          </article>
+
+          <!-- Topic 12: Cost Management & FinOps -->
+          <article class="topic-card" data-category="security-ops" id="topic-cost">
+            <div class="topic-card-header">
+              <div class="topic-meta">
+                <span class="topic-badge">Operations & FinOps</span>
+                <span class="topic-number">Module 12</span>
+              </div>
+              <h2 class="topic-title">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color:var(--color-primary); flex-shrink:0;">
+                  <line x1="12" y1="1" x2="12" y2="23"></line>
+                  <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+                </svg>
+                Cloud Cost Management & FinOps
+              </h2>
+            </div>
+            <div class="topic-card-body">
+              <div class="content-block">
+                <div class="content-block-title">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
+                  Definition
+                </div>
+                <p class="content-block-text">
+                  The operational discipline, architectural practices, and cultural framework (Financial Operations or FinOps) that enable organizations to maximize business value from cloud investments through visibility, rightsizing, commitment discounts, and real-time cost governance.
+                </p>
+              </div>
+
+              <div class="content-block">
+                <div class="content-block-title">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg>
+                  Practical Example
+                </div>
+                <p class="content-block-text">
+                  By auditing their cloud bill, a development team discovers five idle database instances running over weekends. They configure automated shutdown schedules for staging environments and purchase a 1-year Savings Plan for steady production workloads, cutting their monthly bill by 42%.
+                </p>
+              </div>
+
+              <div>
+                <div class="content-block-title">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+                  Key Concepts
+                </div>
+                <ul class="key-concepts-list">
+                  <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> <strong>Pricing Models:</strong> On-Demand (pay-per-second, flexible), Reserved / Savings Plans (up to 72% discount for 1-3 yr commitments), and Spot Instances (up to 90% discount for fault-tolerant batch work).</li>
+                  <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> <strong>Mandatory Cost Allocation Tagging:</strong> Labeling every resource with <code>Environment</code>, <code>Owner</code>, and <code>CostCenter</code>.</li>
+                  <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> <strong>Rightsizing:</strong> Downsizing over-provisioned virtual machine sizes based on observed average CPU and memory utilization.</li>
+                  <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> <strong>Automated Budget Alerts:</strong> Setting anomaly detection alarms to immediately trigger when projected spending exceeds monthly thresholds.</li>
+                </ul>
+              </div>
+
+              <div class="content-block" style="background-color: var(--color-bg-subtle); border-color: var(--color-primary-border);">
+                <div class="content-block-title" style="color:var(--color-primary);">Summary</div>
+                <p class="content-block-text">
+                  Unmanaged cloud computing can rapidly lead to surprise bills. Adopting FinOps best practices ensures technical agility without sacrificing financial discipline.
+                </p>
+              </div>
+            </div>
+
+            <div class="topic-expandable" id="expandable-12">
+              <h4 style="font-size:1rem; margin-bottom:0.5rem; color:var(--color-navy-dark);">Deep Dive: The 3 Phases of FinOps</h4>
+              <p style="font-size:0.9rem; margin-bottom:0.75rem;">
+                The FinOps Foundation defines three continuous phases: <strong>Inform</strong> (visibility and allocation through tagging), <strong>Optimize</strong> (rate optimization via commitments and usage rightsizing), and <strong>Operate</strong> (continuous governance, automated policies, and engineering KPIs).
+              </p>
+            </div>
+
+            <div class="topic-card-footer">
+              <button type="button" class="topic-toggle-btn" aria-expanded="false" aria-controls="expandable-12">
+                <span>View In-Depth Guide</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+              </button>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Shared Footer -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="logo" style="color:var(--color-white);">
+            <div class="logo-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z"></path>
+              </svg>
+            </div>
+            <span>CloudLearn</span>
+          </a>
+          <p class="footer-desc">
+            A free, open educational resource dedicated to teaching cloud computing architectures, security, and provider platforms cleanly and accurately.
+          </p>
+        </div>
+
+        <div>
+          <h4 class="footer-heading">Curriculum Topics</h4>
+          <ul class="footer-links">
+            <li><a href="#topic-definition" class="footer-link">What is Cloud Computing?</a></li>
+            <li><a href="#topic-service-models" class="footer-link">IaaS, PaaS & SaaS</a></li>
+            <li><a href="#topic-virtualization" class="footer-link">Virtualization & Containers</a></li>
+            <li><a href="#topic-networking" class="footer-link">Cloud Networking & VPC</a></li>
+            <li><a href="#topic-cost" class="footer-link">Cost Management & FinOps</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-heading">Next Steps</h4>
+          <ul class="footer-links">
+            <li><a href="providers.html" class="footer-link">Compare Cloud Providers</a></li>
+            <li><a href="projects.html" class="footer-link">Beginner Hands-on Projects</a></li>
+            <li><a href="quiz.html" class="footer-link">Test Your Cloud Knowledge</a></li>
+            <li><a href="README.md" class="footer-link" target="_blank" rel="noopener">Documentation</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-heading">About Curriculum</h4>
+          <p style="font-size:0.875rem; line-height:1.6; color:#94a3b8;">
+            Content curated according to official documentation standards from AWS, Microsoft Learn, and Google Cloud documentation. 100% vendor-neutral foundational learning.
+          </p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>
+          &copy; CloudLearn – Cloud Computing Academy. Built for students, engineers, and cloud enthusiasts.
+        </div>
+        <div class="footer-legal-links">
+          <span>Standards: NIST SP 800-145</span>
+          <span>Open Educational Resource</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <button type="button" class="back-to-top" aria-label="Back to top">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+      <polyline points="18 15 12 9 6 15"></polyline>
+    </svg>
+  </button>
+
+  <script src="js/main.js"></script>
+  <script src="js/learn.js"></script>
+</body>
+</html>

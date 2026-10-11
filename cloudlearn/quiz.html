@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Test your cloud computing skills with our interactive 15-question quiz. Covers IaaS, PaaS, SaaS, AWS, Azure, GCP, VPC, cloud storage, and security architectures.">
+  <meta name="keywords" content="cloud computing quiz, cloud assessment, AWS quiz, Azure quiz, IaaS PaaS SaaS quiz, cloud exam practice">
+  <meta name="author" content="CloudLearn Academy">
+  <title>Interactive Cloud Computing Quiz | CloudLearn Academy</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- Header / Navigation Bar -->
+  <header class="header" id="site-header">
+    <div class="container nav-container">
+      <a href="index.html" class="logo" aria-label="CloudLearn Home">
+        <div class="logo-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z"></path>
+          </svg>
+        </div>
+        <span>CloudLearn</span>
+        <span class="logo-badge">Academy</span>
+      </a>
+
+      <!-- Desktop Navigation Links -->
+      <nav aria-label="Primary Navigation">
+        <ul class="nav-links">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="learn.html" class="nav-link">Learn</a></li>
+          <li><a href="learn.html#service-models" class="nav-link">Services</a></li>
+          <li><a href="providers.html" class="nav-link">Providers</a></li>
+          <li><a href="projects.html" class="nav-link">Projects</a></li>
+          <li><a href="quiz.html" class="nav-link active">Quiz</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="learn.html" class="btn btn-outline btn-sm">Study Curriculum</a>
+        <button type="button" class="mobile-toggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="mobile-nav-drawer">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="4" y1="8" x2="20" y2="8"></line>
+            <line x1="4" y1="16" x2="20" y2="16"></line>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Menu -->
+  <div class="mobile-nav" id="mobile-nav-drawer" aria-label="Mobile Navigation">
+    <ul class="mobile-nav-links">
+      <li><a href="index.html" class="mobile-nav-link">Home</a></li>
+      <li><a href="learn.html" class="mobile-nav-link">Learn Topics</a></li>
+      <li><a href="learn.html#service-models" class="mobile-nav-link">Service Models</a></li>
+      <li><a href="providers.html" class="mobile-nav-link">Cloud Providers</a></li>
+      <li><a href="projects.html" class="mobile-nav-link">Hands-On Projects</a></li>
+      <li><a href="quiz.html" class="mobile-nav-link active">Knowledge Quiz</a></li>
+    </ul>
+  </div>
+
+  <main id="main-content" class="main-content">
+
+    <!-- Page Header Banner -->
+    <section class="section section-alt" style="padding: 3.5rem 0;" aria-labelledby="quiz-page-heading">
+      <div class="container">
+        <div class="section-header text-left" style="margin-bottom: 0;">
+          <div class="section-tag">Interactive Evaluation</div>
+          <h1 id="quiz-page-heading" class="section-title">Cloud Computing Knowledge Assessment</h1>
+          <p class="section-subtitle">
+            Validate your mastery across cloud fundamentals, service models (IaaS/PaaS/SaaS), architecture principles, provider platforms, security governance, and FinOps.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Quiz Interactive Section -->
+    <section class="section" style="padding: 4rem 0;">
+      <div class="container">
+        <div class="quiz-wrapper">
+
+          <!-- Active Quiz Card -->
+          <div class="quiz-card" id="quizCard" role="region" aria-label="Quiz Question Card">
+            <div class="quiz-progress-bar-container" aria-hidden="true">
+              <div class="quiz-progress-bar-fill" id="progressFill"></div>
+            </div>
+
+            <div class="quiz-header">
+              <div class="quiz-progress-info">
+                <span class="quiz-category-tag" id="categoryBadge">Fundamentals</span>
+                <span class="quiz-question-counter">
+                  Question <strong id="currentQNum">1</strong> of <span id="totalQNum">15</span>
+                </span>
+              </div>
+              <div class="quiz-score-badge">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="color:var(--color-primary);"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+                <span>Score: <span id="currentScoreDisplay">0</span></span>
+              </div>
+            </div>
+
+            <div class="quiz-body">
+              <h2 class="quiz-question-text" id="questionText">
+                Loading question...
+              </h2>
+
+              <div class="quiz-options-grid" id="optionsContainer" role="group" aria-label="Question choices">
+                <!-- Dynamically generated via quiz.js -->
+              </div>
+
+              <!-- Explanation Area (Revealed on Answer Selection) -->
+              <div class="quiz-explanation-box" id="explanationBox" aria-live="polite">
+                <!-- Dynamically populated -->
+              </div>
+
+              <div class="quiz-actions">
+                <span style="font-size:0.85rem; color:var(--color-text-muted);">
+                  Select an answer above to see the explanation and advance.
+                </span>
+                <button type="button" class="btn btn-primary" id="nextBtn" disabled>
+                  <span>Next Question</span>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Final Results Card (Initially Hidden) -->
+          <div class="quiz-card quiz-results-card" id="resultsCard" role="region" aria-label="Quiz Results Summary">
+            <div class="results-score-circle">
+              <div class="results-score-number" id="finalScoreNumber">0%</div>
+              <div class="results-score-label">Final Score</div>
+            </div>
+
+            <h2 class="results-title" id="resultsTitle">Quiz Completed!</h2>
+            <p class="results-feedback" id="resultsFeedback">
+              Calculating your performance...
+            </p>
+
+            <div class="results-category-breakdown">
+              <div class="breakdown-title">Performance by Knowledge Category</div>
+              <div id="categoryBreakdownList">
+                <!-- Populated dynamically via quiz.js -->
+              </div>
+            </div>
+
+            <div class="results-btn-group">
+              <button type="button" class="btn btn-primary btn-lg" id="restartBtn">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="1 4 1 10 7 10"/><path d="M3.51 15a9 9 0 1 0 2.13-9.36L1 10"/></svg>
+                <span>Retake Quiz</span>
+              </button>
+              <button type="button" class="btn btn-secondary btn-lg" id="reviewToggleBtn">
+                <span>Review All Questions & Answers</span>
+              </button>
+              <a href="learn.html" class="btn btn-outline btn-lg">Back to Modules</a>
+            </div>
+
+            <!-- Detailed Question Review Section -->
+            <div class="quiz-review-section" id="reviewSection">
+              <h3 style="font-size:1.35rem; margin-bottom:1.25rem; color:var(--color-navy-dark);">Detailed Answer Review</h3>
+              <div id="reviewListContainer">
+                <!-- Populated by quiz.js -->
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Shared Footer -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="logo" style="color:var(--color-white);">
+            <div class="logo-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z"></path>
+              </svg>
+            </div>
+            <span>CloudLearn</span>
+          </a>
+          <p class="footer-desc">
+            A free, open educational resource dedicated to teaching cloud computing architectures, security, and provider platforms cleanly and accurately.
+          </p>
+        </div>
+
+        <div>
+          <h4 class="footer-heading">Quiz Topics</h4>
+          <ul class="footer-links">
+            <li><a href="learn.html#topic-definition" class="footer-link">NIST Cloud Definition</a></li>
+            <li><a href="learn.html#topic-service-models" class="footer-link">Shared Responsibility Model</a></li>
+            <li><a href="learn.html#topic-storage" class="footer-link">Object vs Block Storage</a></li>
+            <li><a href="learn.html#topic-networking" class="footer-link">VPC Networking & Gateways</a></li>
+            <li><a href="learn.html#topic-cost" class="footer-link">Cloud Economics (CapEx vs OpEx)</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-heading">Academy Sections</h4>
+          <ul class="footer-links">
+            <li><a href="learn.html" class="footer-link">12 Educational Modules</a></li>
+            <li><a href="providers.html" class="footer-link">Cloud Providers Matrix</a></li>
+            <li><a href="projects.html" class="footer-link">Hands-On Projects</a></li>
+            <li><a href="README.md" class="footer-link" target="_blank" rel="noopener">Documentation</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-heading">Exam Readiness</h4>
+          <p style="font-size:0.875rem; line-height:1.6; color:#94a3b8;">
+            These 15 questions align directly with beginner certifications including AWS Certified Cloud Practitioner (CLF-C02), Microsoft Azure Fundamentals (AZ-900), and Google Cloud Digital Leader.
+          </p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>
+          &copy; CloudLearn – Cloud Computing Academy. Built for students, engineers, and cloud enthusiasts.
+        </div>
+        <div class="footer-legal-links">
+          <span>Standards: NIST SP 800-145</span>
+          <span>Open Educational Resource</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <button type="button" class="back-to-top" aria-label="Back to top">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+      <polyline points="18 15 12 9 6 15"></polyline>
+    </svg>
+  </button>
+
+  <script src="js/main.js"></script>
+  <script src="js/quiz.js"></script>
+</body>
+</html>

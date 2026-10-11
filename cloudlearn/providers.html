@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Compare the major public cloud providers: Amazon Web Services (AWS), Microsoft Azure, and Google Cloud Platform (GCP). Factual service mappings, use cases, and official learning resources.">
+  <meta name="keywords" content="AWS, Microsoft Azure, Google Cloud, GCP, cloud provider comparison, EC2, S3, Azure VM, Blob, Compute Engine">
+  <meta name="author" content="CloudLearn Academy">
+  <title>Major Cloud Providers Compared | CloudLearn Academy</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- Header / Navigation Bar -->
+  <header class="header" id="site-header">
+    <div class="container nav-container">
+      <a href="index.html" class="logo" aria-label="CloudLearn Home">
+        <div class="logo-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z"></path>
+          </svg>
+        </div>
+        <span>CloudLearn</span>
+        <span class="logo-badge">Academy</span>
+      </a>
+
+      <!-- Desktop Navigation Links -->
+      <nav aria-label="Primary Navigation">
+        <ul class="nav-links">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="learn.html" class="nav-link">Learn</a></li>
+          <li><a href="learn.html#service-models" class="nav-link">Services</a></li>
+          <li><a href="providers.html" class="nav-link active">Providers</a></li>
+          <li><a href="projects.html" class="nav-link">Projects</a></li>
+          <li><a href="quiz.html" class="nav-link">Quiz</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="projects.html" class="btn btn-primary btn-sm">Try Hands-On Projects</a>
+        <button type="button" class="mobile-toggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="mobile-nav-drawer">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="4" y1="8" x2="20" y2="8"></line>
+            <line x1="4" y1="16" x2="20" y2="16"></line>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Menu -->
+  <div class="mobile-nav" id="mobile-nav-drawer" aria-label="Mobile Navigation">
+    <ul class="mobile-nav-links">
+      <li><a href="index.html" class="mobile-nav-link">Home</a></li>
+      <li><a href="learn.html" class="mobile-nav-link">Learn Topics</a></li>
+      <li><a href="learn.html#service-models" class="mobile-nav-link">Service Models</a></li>
+      <li><a href="providers.html" class="mobile-nav-link active">Cloud Providers</a></li>
+      <li><a href="projects.html" class="mobile-nav-link">Hands-On Projects</a></li>
+      <li><a href="quiz.html" class="mobile-nav-link">Knowledge Quiz</a></li>
+    </ul>
+  </div>
+
+  <main id="main-content" class="main-content">
+
+    <!-- Page Header Banner -->
+    <section class="section section-alt" style="padding: 3.5rem 0;" aria-labelledby="providers-page-heading">
+      <div class="container">
+        <div class="section-header text-left" style="margin-bottom: 0;">
+          <div class="section-tag">Hyperscaler Analysis</div>
+          <h1 id="providers-page-heading" class="section-title">Major Cloud Providers</h1>
+          <p class="section-subtitle">
+            An objective, factual comparison of the three primary public hyperscalers: Amazon Web Services (AWS), Microsoft Azure, and Google Cloud Platform (GCP).
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Detailed Provider Cards -->
+    <section class="section" style="padding-top: 4rem;">
+      <div class="container">
+        <div class="provider-cards-grid">
+
+          <!-- 1. Amazon Web Services (AWS) -->
+          <article class="provider-card aws" id="aws-deep-dive">
+            <div class="provider-header">
+              <div class="provider-logo-box">AWS</div>
+              <div>
+                <h2 class="provider-name">Amazon Web Services</h2>
+                <div class="provider-launch">Commercially Launched: 2006 | Headquartered in Seattle, USA</div>
+              </div>
+            </div>
+
+            <p class="provider-desc">
+              Amazon Web Services is the pioneer of modern public cloud computing. Launched in 2006 with S3 and EC2, AWS features the most mature, expansive catalog of cloud services, holding widespread adoption across Fortune 500 enterprises, government agencies, and global technology startups.
+            </p>
+
+            <div>
+              <div class="provider-section-title">General Use Cases</div>
+              <ul style="font-size:0.9rem; line-height:1.6; margin-bottom:1.5rem; color:var(--color-text-main);">
+                <li>Large-scale enterprise migrations requiring extensive legacy software and OS compatibility.</li>
+                <li>High-scale distributed systems and microservices architectures requiring deep service variety.</li>
+                <li>Global e-commerce and media streaming requiring high-throughput object storage and content delivery.</li>
+              </ul>
+            </div>
+
+            <div>
+              <div class="provider-section-title">Major Service Categories</div>
+              <div class="service-tag-list">
+                <span class="service-tag">Compute: EC2, Lambda, ECS, EKS</span>
+                <span class="service-tag">Storage: S3, EBS, EFS, Glacier</span>
+                <span class="service-tag">Databases: RDS, DynamoDB, Aurora</span>
+                <span class="service-tag">Networking: VPC, Route 53, CloudFront</span>
+                <span class="service-tag">Security: IAM, KMS, Shield, WAF</span>
+                <span class="service-tag">AI/ML: SageMaker, Bedrock</span>
+              </div>
+            </div>
+
+            <div class="provider-resources">
+              <div class="provider-section-title">Official Learning Resources</div>
+              <ul style="list-style:none; padding:0; display:flex; flex-direction:column; gap:0.5rem; font-size:0.875rem;">
+                <li>
+                  <a href="https://aws.amazon.com/training/" target="_blank" rel="noopener noreferrer" style="display:inline-flex; align-items:center; gap:0.4rem; font-weight:600;">
+                    <span>AWS Skill Builder (Free Official Courses)</span>
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/></svg>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://docs.aws.amazon.com/" target="_blank" rel="noopener noreferrer" style="display:inline-flex; align-items:center; gap:0.4rem; font-weight:600;">
+                    <span>Official AWS Documentation</span>
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/></svg>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://aws.amazon.com/free/" target="_blank" rel="noopener noreferrer" style="display:inline-flex; align-items:center; gap:0.4rem; font-weight:600;">
+                    <span>AWS Free Tier Program</span>
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/></svg>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </article>
+
+          <!-- 2. Microsoft Azure -->
+          <article class="provider-card azure" id="azure-deep-dive">
+            <div class="provider-header">
+              <div class="provider-logo-box">Azure</div>
+              <div>
+                <h2 class="provider-name">Microsoft Azure</h2>
+                <div class="provider-launch">Commercially Launched: 2010 | Headquartered in Redmond, USA</div>
+              </div>
+            </div>
+
+            <p class="provider-desc">
+              Microsoft Azure was launched in 2010 (initially Windows Azure) and has grown into the leading enterprise and hybrid cloud platform. Azure features seamless integration with Microsoft’s corporate software ecosystem, including Windows Server, Microsoft Entra ID, and SQL Server.
+            </p>
+
+            <div>
+              <div class="provider-section-title">General Use Cases</div>
+              <ul style="font-size:0.9rem; line-height:1.6; margin-bottom:1.5rem; color:var(--color-text-main);">
+                <li>Hybrid enterprise infrastructure connecting existing on-premises Windows Active Directory domains.</li>
+                <li>Organizations running .NET applications, Microsoft SQL Server databases, and Windows Server clusters.</li>
+                <li>Government and regulated industries benefiting from Azure Government and Azure Arc multi-cloud governance.</li>
+              </ul>
+            </div>
+
+            <div>
+              <div class="provider-section-title">Major Service Categories</div>
+              <div class="service-tag-list">
+                <span class="service-tag">Compute: Virtual Machines, Functions, AKS</span>
+                <span class="service-tag">Storage: Blob Storage, Azure Files, Disks</span>
+                <span class="service-tag">Databases: Azure SQL Database, Cosmos DB</span>
+                <span class="service-tag">Networking: Virtual Network (VNet), Front Door</span>
+                <span class="service-tag">Security: Entra ID, Key Vault, Sentinel</span>
+                <span class="service-tag">AI/ML: Azure OpenAI Service, Cognitive Services</span>
+              </div>
+            </div>
+
+            <div class="provider-resources">
+              <div class="provider-section-title">Official Learning Resources</div>
+              <ul style="list-style:none; padding:0; display:flex; flex-direction:column; gap:0.5rem; font-size:0.875rem;">
+                <li>
+                  <a href="https://learn.microsoft.com/en-us/training/azure/" target="_blank" rel="noopener noreferrer" style="display:inline-flex; align-items:center; gap:0.4rem; font-weight:600;">
+                    <span>Microsoft Learn (Free Interactive Sandbox)</span>
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/></svg>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://learn.microsoft.com/en-us/azure/architecture/" target="_blank" rel="noopener noreferrer" style="display:inline-flex; align-items:center; gap:0.4rem; font-weight:600;">
+                    <span>Azure Architecture Center</span>
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/></svg>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://azure.microsoft.com/en-us/free/" target="_blank" rel="noopener noreferrer" style="display:inline-flex; align-items:center; gap:0.4rem; font-weight:600;">
+                    <span>Azure Free Account & 12 Months Free Services</span>
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/></svg>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </article>
+
+          <!-- 3. Google Cloud Platform (GCP) -->
+          <article class="provider-card gcp" id="gcp-deep-dive">
+            <div class="provider-header">
+              <div class="provider-logo-box">GCP</div>
+              <div>
+                <h2 class="provider-name">Google Cloud</h2>
+                <div class="provider-launch">Commercially Launched: 2008 / 2011 | Headquartered in Mountain View, USA</div>
+              </div>
+            </div>
+
+            <p class="provider-desc">
+              Google Cloud originated with Google App Engine in 2008 and evolved into a comprehensive public cloud platform in 2011. Known globally as the cradle of modern distributed systems, Google pioneered Kubernetes (based on its internal Borg system) and MapReduce big data frameworks.
+            </p>
+
+            <div>
+              <div class="provider-section-title">General Use Cases</div>
+              <ul style="font-size:0.9rem; line-height:1.6; margin-bottom:1.5rem; color:var(--color-text-main);">
+                <li>Petabyte-scale big data analytics, real-time streaming, and interactive querying with BigQuery.</li>
+                <li>Modern containerized microservices deployments using Google Kubernetes Engine (GKE) and Cloud Run.</li>
+                <li>Machine learning, AI research, and model deployment powered by Google Vertex AI and TPU hardware.</li>
+              </ul>
+            </div>
+
+            <div>
+              <div class="provider-section-title">Major Service Categories</div>
+              <div class="service-tag-list">
+                <span class="service-tag">Compute: Compute Engine, Cloud Run, GKE</span>
+                <span class="service-tag">Storage: Cloud Storage, Persistent Disk</span>
+                <span class="service-tag">Databases: Cloud SQL, Spanner, Bigtable</span>
+                <span class="service-tag">Analytics: BigQuery, Pub/Sub, Dataflow</span>
+                <span class="service-tag">Networking: VPC, Cloud Armor, Cloud CDN</span>
+                <span class="service-tag">AI/ML: Vertex AI, TensorFlow, TPUs</span>
+              </div>
+            </div>
+
+            <div class="provider-resources">
+              <div class="provider-section-title">Official Learning Resources</div>
+              <ul style="list-style:none; padding:0; display:flex; flex-direction:column; gap:0.5rem; font-size:0.875rem;">
+                <li>
+                  <a href="https://www.cloudskillsboost.google/" target="_blank" rel="noopener noreferrer" style="display:inline-flex; align-items:center; gap:0.4rem; font-weight:600;">
+                    <span>Google Cloud Skills Boost (Hands-on Labs)</span>
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/></svg>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://cloud.google.com/architecture" target="_blank" rel="noopener noreferrer" style="display:inline-flex; align-items:center; gap:0.4rem; font-weight:600;">
+                    <span>Google Cloud Architecture Framework</span>
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/></svg>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://cloud.google.com/free" target="_blank" rel="noopener noreferrer" style="display:inline-flex; align-items:center; gap:0.4rem; font-weight:600;">
+                    <span>Google Cloud Free Tier & $300 Credits</span>
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/></svg>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Side-by-Side Service Comparison Matrix Table -->
+    <section class="section section-alt" id="service-matrix" aria-labelledby="matrix-heading">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-tag">Cross-Provider Mapping</div>
+          <h2 id="matrix-heading" class="section-title">Core Service Comparison Matrix</h2>
+          <p class="section-subtitle">
+            A practical side-by-side mapping of equivalent core services across AWS, Azure, and Google Cloud to help you translate architectural designs across providers.
+          </p>
+        </div>
+
+        <div class="table-responsive">
+          <table class="comparison-table" summary="Side by side comparison of equivalent cloud services across AWS, Microsoft Azure, and Google Cloud">
+            <thead>
+              <tr>
+                <th scope="col" style="min-width: 180px;">Service Category</th>
+                <th scope="col" style="min-width: 220px; color:var(--color-aws-accent);">Amazon Web Services (AWS)</th>
+                <th scope="col" style="min-width: 220px; color:var(--color-azure-accent);">Microsoft Azure</th>
+                <th scope="col" style="min-width: 220px; color:var(--color-gcp-accent);">Google Cloud Platform (GCP)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="table-category-cell">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="8" rx="2"/><rect x="2" y="14" width="20" height="8" rx="2"/></svg>
+                  Virtual Machines (IaaS)
+                </td>
+                <td><strong>Amazon EC2</strong><br><span style="font-size:0.8rem; color:var(--color-text-muted);">Elastic Compute Cloud</span></td>
+                <td><strong>Azure Virtual Machines</strong><br><span style="font-size:0.8rem; color:var(--color-text-muted);">General & Specialized VMs</span></td>
+                <td><strong>Google Compute Engine</strong><br><span style="font-size:0.8rem; color:var(--color-text-muted);">Custom Machine Types</span></td>
+              </tr>
+              <tr>
+                <td class="table-category-cell">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg>
+                  Object Storage
+                </td>
+                <td><strong>Amazon S3</strong><br><span style="font-size:0.8rem; color:var(--color-text-muted);">Simple Storage Service</span></td>
+                <td><strong>Azure Blob Storage</strong><br><span style="font-size:0.8rem; color:var(--color-text-muted);">Hot, Cool, Cold, Archive tiers</span></td>
+                <td><strong>Google Cloud Storage</strong><br><span style="font-size:0.8rem; color:var(--color-text-muted);">Standard, Nearline, Coldline</span></td>
+              </tr>
+              <tr>
+                <td class="table-category-cell">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/></svg>
+                  Block Storage (VM Disks)
+                </td>
+                <td><strong>Amazon EBS</strong><br><span style="font-size:0.8rem; color:var(--color-text-muted);">Elastic Block Store</span></td>
+                <td><strong>Azure Managed Disks</strong><br><span style="font-size:0.8rem; color:var(--color-text-muted);">Standard HDD, Premium SSD, Ultra</span></td>
+                <td><strong>Google Persistent Disk</strong><br><span style="font-size:0.8rem; color:var(--color-text-muted);">Standard, Balanced, Extreme SSD</span></td>
+              </tr>
+              <tr>
+                <td class="table-category-cell">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg>
+                  Managed Relational DB (SQL)
+                </td>
+                <td><strong>Amazon RDS / Aurora</strong><br><span style="font-size:0.8rem; color:var(--color-text-muted);">PostgreSQL, MySQL, MariaDB, SQL Server</span></td>
+                <td><strong>Azure SQL Database</strong><br><span style="font-size:0.8rem; color:var(--color-text-muted);">Fully managed MSSQL, PostgreSQL, MySQL</span></td>
+                <td><strong>Google Cloud SQL / AlloyDB</strong><br><span style="font-size:0.8rem; color:var(--color-text-muted);">PostgreSQL, MySQL, SQL Server</span></td>
+              </tr>
+              <tr>
+                <td class="table-category-cell">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 2 7 12 12 22 7 12 2"/></svg>
+                  NoSQL Key-Value / Document
+                </td>
+                <td><strong>Amazon DynamoDB</strong><br><span style="font-size:0.8rem; color:var(--color-text-muted);">Single-digit millisecond latency</span></td>
+                <td><strong>Azure Cosmos DB</strong><br><span style="font-size:0.8rem; color:var(--color-text-muted);">Multi-model, turnkey global distribution</span></td>
+                <td><strong>Google Cloud Firestore / Bigtable</strong><br><span style="font-size:0.8rem; color:var(--color-text-muted);">Real-time documents & massive wide-column</span></td>
+              </tr>
+              <tr>
+                <td class="table-category-cell">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+                  Serverless Functions (FaaS)
+                </td>
+                <td><strong>AWS Lambda</strong><br><span style="font-size:0.8rem; color:var(--color-text-muted);">Event-driven compute</span></td>
+                <td><strong>Azure Functions</strong><br><span style="font-size:0.8rem; color:var(--color-text-muted);">Event-driven serverless code</span></td>
+                <td><strong>Google Cloud Functions / Cloud Run</strong><br><span style="font-size:0.8rem; color:var(--color-text-muted);">Micro-functions & serverless containers</span></td>
+              </tr>
+              <tr>
+                <td class="table-category-cell">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+                  Virtual Network (Software Defined)
+                </td>
+                <td><strong>Amazon VPC</strong><br><span style="font-size:0.8rem; color:var(--color-text-muted);">Virtual Private Cloud</span></td>
+                <td><strong>Azure Virtual Network (VNet)</strong><br><span style="font-size:0.8rem; color:var(--color-text-muted);">Isolated private networks</span></td>
+                <td><strong>Google VPC</strong><br><span style="font-size:0.8rem; color:var(--color-text-muted);">Global software-defined VPC</span></td>
+              </tr>
+              <tr>
+                <td class="table-category-cell">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+                  Identity & Access Management
+                </td>
+                <td><strong>AWS IAM</strong><br><span style="font-size:0.8rem; color:var(--color-text-muted);">Identity and Access Management</span></td>
+                <td><strong>Microsoft Entra ID</strong><br><span style="font-size:0.8rem; color:var(--color-text-muted);">(Formerly Azure Active Directory)</span></td>
+                <td><strong>Google Cloud IAM</strong><br><span style="font-size:0.8rem; color:var(--color-text-muted);">Granular role-based resource access</span></td>
+              </tr>
+              <tr>
+                <td class="table-category-cell">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+                  Managed Kubernetes (K8s)
+                </td>
+                <td><strong>Amazon EKS</strong><br><span style="font-size:0.8rem; color:var(--color-text-muted);">Elastic Kubernetes Service</span></td>
+                <td><strong>Azure Kubernetes Service (AKS)</strong><br><span style="font-size:0.8rem; color:var(--color-text-muted);">Managed cluster orchestration</span></td>
+                <td><strong>Google Kubernetes Engine (GKE)</strong><br><span style="font-size:0.8rem; color:var(--color-text-muted);">Industry standard Autopilot & standard</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- Global Infrastructure Concept Section -->
+    <section class="section" id="infrastructure" aria-labelledby="infra-heading">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-tag">Global Footprint</div>
+          <h2 id="infra-heading" class="section-title">How Cloud Infrastructure is Built</h2>
+          <p class="section-subtitle">
+            All major cloud providers organize their global physical server hardware into three standardized hierarchical layers.
+          </p>
+        </div>
+
+        <div class="grid-3">
+          <div class="card">
+            <div class="card-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+            </div>
+            <h3 class="card-title">1. Geographic Regions</h3>
+            <p class="card-desc">
+              A Region is a distinct physical geographic area across the globe (e.g., <code>us-east-1</code> in North Virginia, <code>eu-central-1</code> in Frankfurt, <code>ap-south-1</code> in Mumbai). Each region contains multiple isolated data center locations connected via ultra-low-latency private fiber.
+            </p>
+            <div style="font-size:0.85rem; color:var(--color-text-muted); border-top:1px solid var(--border-color-light); padding-top:0.75rem;">
+              <strong>Key Rule:</strong> Customer data never leaves a Region unless explicitly configured by the customer.
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="8" rx="2"/><rect x="2" y="14" width="20" height="8" rx="2"/></svg>
+            </div>
+            <h3 class="card-title">2. Availability Zones (AZ)</h3>
+            <p class="card-desc">
+              Each Region is made up of 3 or more Availability Zones. An AZ consists of one or more discrete physical data centers equipped with independent power substations, diesel generators, water chillers, and physically distinct fiber ingress routes.
+            </p>
+            <div style="font-size:0.85rem; color:var(--color-text-muted); border-top:1px solid var(--border-color-light); padding-top:0.75rem;">
+              <strong>Fault Tolerance:</strong> Deploying servers across multiple AZs shields your app from data center failure.
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></polygon>
+            </div>
+            <h3 class="card-title">3. Edge Locations / PoPs</h3>
+            <p class="card-desc">
+              Edge Locations (Points of Presence) are hundreds of smaller caching data centers distributed in major metropolitan cities worldwide. They run Content Delivery Networks (AWS CloudFront, Azure Front Door, Cloud CDN) and DDoS mitigation shields closest to end users.
+            </p>
+            <div style="font-size:0.85rem; color:var(--color-text-muted); border-top:1px solid var(--border-color-light); padding-top:0.75rem;">
+              <strong>Latency Benefit:</strong> Reduces round-trip web request latency from hundreds of milliseconds to single digits.
+            </div>
+          </div>
+        </div>
+
+        <div style="text-align: center; margin-top: 3.5rem;">
+          <a href="projects.html" class="btn btn-primary btn-lg">Apply This Knowledge in Real Projects</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Shared Footer -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="logo" style="color:var(--color-white);">
+            <div class="logo-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z"></path>
+              </svg>
+            </div>
+            <span>CloudLearn</span>
+          </a>
+          <p class="footer-desc">
+            A free, open educational resource dedicated to teaching cloud computing architectures, security, and provider platforms cleanly and accurately.
+          </p>
+        </div>
+
+        <div>
+          <h4 class="footer-heading">Provider Breakdowns</h4>
+          <ul class="footer-links">
+            <li><a href="#aws-deep-dive" class="footer-link">Amazon Web Services (AWS)</a></li>
+            <li><a href="#azure-deep-dive" class="footer-link">Microsoft Azure</a></li>
+            <li><a href="#gcp-deep-dive" class="footer-link">Google Cloud Platform (GCP)</a></li>
+            <li><a href="#service-matrix" class="footer-link">Service Mapping Matrix</a></li>
+            <li><a href="#infrastructure" class="footer-link">Global Infrastructure</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-heading">Learning Curriculum</h4>
+          <ul class="footer-links">
+            <li><a href="learn.html" class="footer-link">All 12 Cloud Modules</a></li>
+            <li><a href="projects.html" class="footer-link">Hands-On Cloud Projects</a></li>
+            <li><a href="quiz.html" class="footer-link">Test Your Knowledge Quiz</a></li>
+            <li><a href="README.md" class="footer-link" target="_blank" rel="noopener">Course Documentation</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-heading">Educational Integrity</h4>
+          <p style="font-size:0.875rem; line-height:1.6; color:#94a3b8;">
+            All product comparisons are based on verified official documentation and vendor architecture standards. CloudLearn does not accept vendor sponsorships or promote proprietary bias.
+          </p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>
+          &copy; CloudLearn – Cloud Computing Academy. Built for students, engineers, and cloud enthusiasts.
+        </div>
+        <div class="footer-legal-links">
+          <span>Standards: NIST SP 800-145</span>
+          <span>Open Educational Resource</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <button type="button" class="back-to-top" aria-label="Back to top">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+      <polyline points="18 15 12 9 6 15"></polyline>
+    </svg>
+  </button>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

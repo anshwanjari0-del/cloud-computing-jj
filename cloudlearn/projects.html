@@ -1,0 +1,859 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="5 beginner-friendly hands-on cloud computing projects with step-by-step instructions, prerequisites, architecture guides, safety cost warnings, and interactive progress tracking.">
+  <meta name="keywords" content="cloud projects, static website hosting, AWS S3, Azure VM, cloud architecture diagram, backup recovery, beginner cloud labs">
+  <meta name="author" content="CloudLearn Academy">
+  <title>Hands-On Cloud Projects | CloudLearn Academy</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- Header / Navigation Bar -->
+  <header class="header" id="site-header">
+    <div class="container nav-container">
+      <a href="index.html" class="logo" aria-label="CloudLearn Home">
+        <div class="logo-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z"></path>
+          </svg>
+        </div>
+        <span>CloudLearn</span>
+        <span class="logo-badge">Academy</span>
+      </a>
+
+      <!-- Desktop Navigation Links -->
+      <nav aria-label="Primary Navigation">
+        <ul class="nav-links">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="learn.html" class="nav-link">Learn</a></li>
+          <li><a href="learn.html#service-models" class="nav-link">Services</a></li>
+          <li><a href="providers.html" class="nav-link">Providers</a></li>
+          <li><a href="projects.html" class="nav-link active">Projects</a></li>
+          <li><a href="quiz.html" class="nav-link">Quiz</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="quiz.html" class="btn btn-outline btn-sm">Take the Quiz</a>
+        <button type="button" class="mobile-toggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="mobile-nav-drawer">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="4" y1="8" x2="20" y2="8"></line>
+            <line x1="4" y1="16" x2="20" y2="16"></line>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Menu -->
+  <div class="mobile-nav" id="mobile-nav-drawer" aria-label="Mobile Navigation">
+    <ul class="mobile-nav-links">
+      <li><a href="index.html" class="mobile-nav-link">Home</a></li>
+      <li><a href="learn.html" class="mobile-nav-link">Learn Topics</a></li>
+      <li><a href="learn.html#service-models" class="mobile-nav-link">Service Models</a></li>
+      <li><a href="providers.html" class="mobile-nav-link">Cloud Providers</a></li>
+      <li><a href="projects.html" class="mobile-nav-link active">Hands-On Projects</a></li>
+      <li><a href="quiz.html" class="mobile-nav-link">Knowledge Quiz</a></li>
+    </ul>
+  </div>
+
+  <main id="main-content" class="main-content">
+
+    <!-- Page Header Banner -->
+    <section class="section section-alt" style="padding: 3.5rem 0;" aria-labelledby="projects-page-heading">
+      <div class="container">
+        <div class="section-header text-left" style="margin-bottom: 0;">
+          <div class="section-tag">Hands-On Experience</div>
+          <h1 id="projects-page-heading" class="section-title">Practical Cloud Projects</h1>
+          <p class="section-subtitle">
+            Solidify your theoretical understanding with 5 industry-standard beginner cloud projects. Every project includes specific objectives, prerequisites, numbered steps, expected outcomes, and crucial safety and cost guardrails.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Project List -->
+    <section class="section" style="padding-top: 3.5rem;">
+      <div class="container">
+        <div class="projects-container">
+
+          <!-- PROJECT 1 -->
+          <article class="project-card" id="project-1">
+            <div class="project-header">
+              <div class="project-meta-badges">
+                <span class="project-badge-level badge-beginner">Level: Beginner</span>
+                <span class="project-badge-time">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                  Estimated Time: 30–45 mins
+                </span>
+                <span class="project-badge-time">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"/><line x1="7" y1="7" x2="7.01" y2="7"/></svg>
+                  Category: Storage & Web Hosting
+                </span>
+              </div>
+              <h2 class="project-title">1. Host a Static Website Using Cloud Object Storage</h2>
+              <p style="color:var(--color-text-muted); font-size:1.05rem;">
+                Deploy a high-availability, globally reachable HTML/CSS website using AWS S3, Azure Blob Storage, or Google Cloud Storage without maintaining any web servers.
+              </p>
+            </div>
+
+            <div class="project-body">
+              <div class="project-grid-info">
+                <div class="info-box">
+                  <div class="info-box-title">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 14 14"/></svg>
+                    Project Objectives
+                  </div>
+                  <ul style="font-size:0.9rem; line-height:1.6; padding-left:1.1rem; color:var(--color-text-main);">
+                    <li>Create an encrypted cloud storage bucket/container.</li>
+                    <li>Enable the native static website hosting feature.</li>
+                    <li>Configure an explicit bucket policy for public web read permissions.</li>
+                    <li>Upload an <code>index.html</code> and test the public HTTP endpoint in a browser.</li>
+                  </ul>
+                </div>
+
+                <div class="info-box">
+                  <div class="info-box-title">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+                    Prerequisites
+                  </div>
+                  <ul style="font-size:0.9rem; line-height:1.6; padding-left:1.1rem; color:var(--color-text-main);">
+                    <li>Free Tier account on AWS, Microsoft Azure, or Google Cloud.</li>
+                    <li>A simple text editor (e.g. VS Code or Notepad).</li>
+                    <li>Basic knowledge of HTML and web browser developer tools.</li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="project-steps-section">
+                <h4>Step-by-Step Implementation Guide</h4>
+                <div class="steps-timeline">
+                  <div class="step-item">
+                    <div class="step-number">1</div>
+                    <div class="step-details">
+                      <div class="step-title">Prepare Your Local Web Files</div>
+                      <p class="step-desc">
+                        Create a local folder containing an <code>index.html</code> and an <code>error.html</code> file with simple heading text such as <em>"Hello from Cloud Storage Website!"</em>.
+                      </p>
+                    </div>
+                  </div>
+
+                  <div class="step-item">
+                    <div class="step-number">2</div>
+                    <div class="step-details">
+                      <div class="step-title">Create a Storage Bucket (AWS S3 Example)</div>
+                      <p class="step-desc">
+                        Open the AWS Management Console, navigate to <strong>S3</strong>, and click <strong>Create bucket</strong>. Choose a globally unique bucket name (e.g., <code>cloudlearn-demo-web-2026</code>) and select your nearest geographic Region (e.g. <code>us-east-1</code>).
+                      </p>
+                    </div>
+                  </div>
+
+                  <div class="step-item">
+                    <div class="step-number">3</div>
+                    <div class="step-details">
+                      <div class="step-title">Enable Static Website Hosting</div>
+                      <p class="step-desc">
+                        Under the bucket's <strong>Properties</strong> tab, scroll down to <strong>Static website hosting</strong>. Click <strong>Edit</strong>, select <strong>Enable</strong>, and designate <code>index.html</code> as your Index document and <code>error.html</code> as your Error document. Save changes.
+                      </p>
+                    </div>
+                  </div>
+
+                  <div class="step-item">
+                    <div class="step-number">4</div>
+                    <div class="step-details">
+                      <div class="step-title">Configure Public Read Access Policy</div>
+                      <p class="step-desc">
+                        Under the <strong>Permissions</strong> tab, disable <em>"Block all public access"</em> for this specific static website bucket. Then add the following read-only Bucket Policy:
+                      </p>
+                      <div class="code-block-wrapper">
+                        <div class="code-header">
+                          <span>JSON Bucket Policy</span>
+                          <button type="button" class="code-copy-btn">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+                            Copy Policy
+                          </button>
+                        </div>
+                        <pre class="code-content"><code>{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Sid": "PublicReadGetObject",
+      "Effect": "Allow",
+      "Principal": "*",
+      "Action": "s3:GetObject",
+      "Resource": "arn:aws:s3:::YOUR-BUCKET-NAME/*"
+    }
+  ]
+}</code></pre>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="step-item">
+                    <div class="step-number">5</div>
+                    <div class="step-details">
+                      <div class="step-title">Upload Web Files & Verify Public Endpoint</div>
+                      <p class="step-desc">
+                        Upload your <code>index.html</code> and <code>error.html</code> files via the <strong>Objects</strong> tab. Copy the bucket website endpoint URL (e.g. <code>http://your-bucket.s3-website-us-east-1.amazonaws.com</code>) into an incognito browser window.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="info-box" style="margin-bottom:1.5rem;">
+                <div class="info-box-title" style="color:var(--color-success);">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                  Expected Outcome
+                </div>
+                <p style="font-size:0.925rem; color:var(--color-text-main); margin:0;">
+                  Your static website loads instantly in any browser anywhere in the world. It requires 0 CPU patches, automatically handles high request volumes, and incurs no ongoing server charges when idle.
+                </p>
+              </div>
+
+              <!-- Safety / Cost Callout -->
+              <div class="callout callout-warning">
+                <svg class="callout-icon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+                <div>
+                  <div class="callout-title">Safety & Cost Considerations</div>
+                  <div class="callout-text">
+                    <strong>1. Security:</strong> Never apply public read policies to buckets storing private databases, configuration secrets, or client documents. Only public web assets should have anonymous <code>s3:GetObject</code> rights. <br>
+                    <strong>2. Cost:</strong> AWS Free Tier provides 5 GB of standard S3 storage and 20,000 GET requests per month for 12 months. Ensure you don't host multi-gigabyte media files without billing alarms.
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="project-footer">
+              <label class="project-checklist-toggle">
+                <input type="checkbox" class="project-complete-checkbox" data-project-id="project-1">
+                <span class="checkbox-custom">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+                </span>
+                <span>Mark Project 1 as Completed</span>
+              </label>
+              <span style="font-size:0.85rem; color:var(--color-text-muted);">Saved automatically in browser</span>
+            </div>
+          </article>
+
+
+          <!-- PROJECT 2 -->
+          <article class="project-card" id="project-2">
+            <div class="project-header">
+              <div class="project-meta-badges">
+                <span class="project-badge-level badge-beginner">Level: Beginner</span>
+                <span class="project-badge-time">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                  Estimated Time: 45–60 mins
+                </span>
+                <span class="project-badge-time">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+                  Category: PaaS & Application Deployment
+                </span>
+              </div>
+              <h2 class="project-title">2. Deploy a Dynamic Web App Using Cloud PaaS</h2>
+              <p style="color:var(--color-text-muted); font-size:1.05rem;">
+                Deploy a dynamic web application (Node.js or Python) using modern Platform-as-a-Service (e.g., Azure App Service, AWS App Runner, or Google Cloud Run) with automated TLS certificates.
+              </p>
+            </div>
+
+            <div class="project-body">
+              <div class="project-grid-info">
+                <div class="info-box">
+                  <div class="info-box-title">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 14 14"/></svg>
+                    Project Objectives
+                  </div>
+                  <ul style="font-size:0.9rem; line-height:1.6; padding-left:1.1rem; color:var(--color-text-main);">
+                    <li>Understand Platform as a Service (PaaS) abstraction.</li>
+                    <li>Package and deploy code directly without configuring operating systems.</li>
+                    <li>Observe automatic HTTPS provisioning and environment variables.</li>
+                    <li>Inspect application streaming logs via cloud console.</li>
+                  </ul>
+                </div>
+
+                <div class="info-box">
+                  <div class="info-box-title">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+                    Prerequisites
+                  </div>
+                  <ul style="font-size:0.9rem; line-height:1.6; padding-left:1.1rem; color:var(--color-text-main);">
+                    <li>A free GitHub account.</li>
+                    <li>Cloud account with Azure (Free App Service Plan F1) or Google Cloud (Free Tier Cloud Run).</li>
+                    <li>A basic 5-line Node.js or Python Flask web script.</li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="project-steps-section">
+                <h4>Step-by-Step Implementation Guide</h4>
+                <div class="steps-timeline">
+                  <div class="step-item">
+                    <div class="step-number">1</div>
+                    <div class="step-details">
+                      <div class="step-title">Create a Minimal Web Application Repository</div>
+                      <p class="step-desc">
+                        Create a public or private GitHub repository named <code>cloud-sample-app</code>. Include a simple <code>server.js</code> file that listens on <code>process.env.PORT || 3000</code> and returns an HTTP response: <em>"Application deployed successfully on Cloud PaaS!"</em>.
+                      </p>
+                    </div>
+                  </div>
+
+                  <div class="step-item">
+                    <div class="step-number">2</div>
+                    <div class="step-details">
+                      <div class="step-title">Provision the PaaS Web App Service</div>
+                      <p class="step-desc">
+                        In Azure Portal or Google Cloud Console, select <strong>Create a Resource &rarr; Web App</strong> (Azure App Service) or <strong>Cloud Run</strong>. Select your language runtime (e.g., Node 18 LTS) and select the <strong>Free F1 Tier</strong> (on Azure) or Serverless per-request pricing.
+                      </p>
+                    </div>
+                  </div>
+
+                  <div class="step-item">
+                    <div class="step-number">3</div>
+                    <div class="step-details">
+                      <div class="step-title">Connect Deployment Center via GitHub</div>
+                      <p class="step-desc">
+                        Under the <strong>Deployment Center</strong> blade, authorize GitHub and select your repository and branch. The cloud provider automatically commits a GitHub Actions CI/CD workflow YAML file to your repository.
+                      </p>
+                    </div>
+                  </div>
+
+                  <div class="step-item">
+                    <div class="step-number">4</div>
+                    <div class="step-details">
+                      <div class="step-title">Verify Live Application & Check Diagnostic Logs</div>
+                      <p class="step-desc">
+                        Wait for the build workflow to finish (typically 90 seconds). Access your allocated domain (e.g. <code>https://your-app.azurewebsites.net</code>). Notice that a valid SSL/TLS certificate is already installed automatically! Open <strong>Log Stream</strong> in the portal to watch live HTTP request logs.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="info-box" style="margin-bottom:1.5rem;">
+                <div class="info-box-title" style="color:var(--color-success);">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                  Expected Outcome
+                </div>
+                <p style="font-size:0.925rem; color:var(--color-text-main); margin:0;">
+                  A production-grade, secure HTTPS dynamic web application running with automatic scaling and automated Git push-to-deploy workflows without managing any underlying Linux or Windows server.
+                </p>
+              </div>
+
+              <div class="callout callout-info">
+                <svg class="callout-icon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
+                <div>
+                  <div class="callout-title">Cost & Teardown Tip</div>
+                  <div class="callout-text">
+                    Select the <strong>Free (F1) App Service plan</strong> on Azure or Google Cloud Run's generous 2 million free monthly requests tier. Once finished testing, you can stop or delete the resource group to prevent accidental plan upgrades.
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="project-footer">
+              <label class="project-checklist-toggle">
+                <input type="checkbox" class="project-complete-checkbox" data-project-id="project-2">
+                <span class="checkbox-custom">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+                </span>
+                <span>Mark Project 2 as Completed</span>
+              </label>
+              <span style="font-size:0.85rem; color:var(--color-text-muted);">Saved automatically in browser</span>
+            </div>
+          </article>
+
+
+          <!-- PROJECT 3 -->
+          <article class="project-card" id="project-3">
+            <div class="project-header">
+              <div class="project-meta-badges">
+                <span class="project-badge-level badge-intermediate">Level: Intermediate</span>
+                <span class="project-badge-time">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                  Estimated Time: 60 mins
+                </span>
+                <span class="project-badge-time">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+                  Category: System Design & Architecture
+                </span>
+              </div>
+              <h2 class="project-title">3. Design a Fault-Tolerant Multi-Tier Cloud Architecture Diagram</h2>
+              <p style="color:var(--color-text-muted); font-size:1.05rem;">
+                Design an industry-standard, resilient 3-tier web architecture diagram incorporating VPC segmentation, load balancing, multi-AZ auto-scaling, and managed database replicas.
+              </p>
+            </div>
+
+            <div class="project-body">
+              <div class="project-grid-info">
+                <div class="info-box">
+                  <div class="info-box-title">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 14 14"/></svg>
+                    Project Objectives
+                  </div>
+                  <ul style="font-size:0.9rem; line-height:1.6; padding-left:1.1rem; color:var(--color-text-main);">
+                    <li>Learn the standard 3-tier architecture pattern (Presentation, Application, Data).</li>
+                    <li>Design strict subnet boundaries (Public vs Private) using CIDR notation.</li>
+                    <li>Incorporate redundant Availability Zones for Zero-Downtime resilience.</li>
+                    <li>Use free diagramming tools (draw.io or Lucidchart) with official cloud icon packs.</li>
+                  </ul>
+                </div>
+
+                <div class="info-box">
+                  <div class="info-box-title">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+                    Prerequisites
+                  </div>
+                  <ul style="font-size:0.9rem; line-height:1.6; padding-left:1.1rem; color:var(--color-text-main);">
+                    <li>A free web browser and an account on diagrams.net (draw.io).</li>
+                    <li>Understanding of VPC, subnets, and load balancers from Learn Module 08.</li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="project-steps-section">
+                <h4>Step-by-Step Implementation Guide</h4>
+                <div class="steps-timeline">
+                  <div class="step-item">
+                    <div class="step-number">1</div>
+                    <div class="step-details">
+                      <div class="step-title">Establish Outer Boundaries (Cloud, Region, & VPC)</div>
+                      <p class="step-desc">
+                        Open draw.io. Draw a large container representing your Cloud Region (e.g. <code>AWS us-east-1</code>). Inside, draw a dashed rectangle representing the <strong>VPC</strong> with CIDR block <code>10.0.0.0/16</code>. Connect an <strong>Internet Gateway</strong> to the perimeter.
+                      </p>
+                    </div>
+                  </div>
+
+                  <div class="step-item">
+                    <div class="step-number">2</div>
+                    <div class="step-details">
+                      <div class="step-title">Design Public Subnets & Application Load Balancer (Tier 1)</div>
+                      <p class="step-desc">
+                        Draw two columns representing Availability Zone A (<code>AZ-1a</code>) and Availability Zone B (<code>AZ-1b</code>). In each, draw a <strong>Public Subnet</strong> (<code>10.0.1.0/24</code> and <code>10.0.2.0/24</code>). Place an <strong>Application Load Balancer (ALB)</strong> spanning both public subnets to distribute inbound internet requests.
+                      </p>
+                    </div>
+                  </div>
+
+                  <div class="step-item">
+                    <div class="step-number">3</div>
+                    <div class="step-details">
+                      <div class="step-title">Design Private Compute Subnets with Auto-Scaling (Tier 2)</div>
+                      <p class="step-desc">
+                        Below the public tier, draw two <strong>Private App Subnets</strong> (<code>10.0.10.0/24</code> and <code>10.0.11.0/24</code>). Place an <strong>Auto Scaling Group</strong> with EC2 instances or container pods inside. Configure outbound internet updates through a <strong>NAT Gateway</strong> in the public subnet.
+                      </p>
+                    </div>
+                  </div>
+
+                  <div class="step-item">
+                    <div class="step-number">4</div>
+                    <div class="step-details">
+                      <div class="step-title">Design Private Database Subnets with Multi-AZ Replication (Tier 3)</div>
+                      <p class="step-desc">
+                        Draw isolated <strong>Private Data Subnets</strong> (<code>10.0.20.0/24</code> and <code>10.0.21.0/24</code>). Place a Primary Database in AZ-1a with automated synchronous replication to a Standby DB in AZ-1b for automatic failover. Add arrows demonstrating traffic flow strictly from Tier 2 to Tier 3.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="info-box" style="margin-bottom:1.5rem;">
+                <div class="info-box-title" style="color:var(--color-success);">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                  Expected Outcome
+                </div>
+                <p style="font-size:0.925rem; color:var(--color-text-main); margin:0;">
+                  A portfolio-ready, professional systems architecture diagram demonstrating how enterprise cloud solutions eliminate single points of failure (SPOF) and protect database layers behind defense-in-depth security zones.
+                </p>
+              </div>
+
+              <div class="callout callout-info">
+                <svg class="callout-icon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
+                <div>
+                  <div class="callout-title">Architectural Best Practice</div>
+                  <div class="callout-text">
+                    Always enforce security groups as virtual firewalls: Tier 1 (ALB) accepts HTTP 80 / HTTPS 443 from <code>0.0.0.0/0</code>; Tier 2 (Compute) accepts port 80/8080 <em>only</em> from Tier 1's Security Group; Tier 3 (Database) accepts port 3306/5432 <em>only</em> from Tier 2's Security Group.
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="project-footer">
+              <label class="project-checklist-toggle">
+                <input type="checkbox" class="project-complete-checkbox" data-project-id="project-3">
+                <span class="checkbox-custom">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+                </span>
+                <span>Mark Project 3 as Completed</span>
+              </label>
+              <span style="font-size:0.85rem; color:var(--color-text-muted);">Saved automatically in browser</span>
+            </div>
+          </article>
+
+
+          <!-- PROJECT 4 -->
+          <article class="project-card" id="project-4">
+            <div class="project-header">
+              <div class="project-meta-badges">
+                <span class="project-badge-level badge-beginner">Level: Beginner</span>
+                <span class="project-badge-time">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                  Estimated Time: 45 mins
+                </span>
+                <span class="project-badge-time">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="8" rx="2"/><rect x="2" y="14" width="20" height="8" rx="2"/><line x1="6" y1="6" x2="6.01" y2="6"/><line x1="6" y1="18" x2="6.01" y2="18"/></svg>
+                  Category: IaaS & Virtual Compute
+                </span>
+              </div>
+              <h2 class="project-title">4. Provision a Linux Virtual Machine & Configure an Nginx Web Server</h2>
+              <p style="color:var(--color-text-muted); font-size:1.05rem;">
+                Launch an Ubuntu Linux cloud virtual machine (AWS EC2, Azure VM, or Google Compute Engine), configure Security Group firewall rules, SSH into the machine, and install an Nginx web server.
+              </p>
+            </div>
+
+            <div class="project-body">
+              <div class="project-grid-info">
+                <div class="info-box">
+                  <div class="info-box-title">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 14 14"/></svg>
+                    Project Objectives
+                  </div>
+                  <ul style="font-size:0.9rem; line-height:1.6; padding-left:1.1rem; color:var(--color-text-main);">
+                    <li>Launch a Free-Tier eligible VM instance (e.g. <code>t2.micro</code> or <code>B1s</code> or <code>e2-micro</code>).</li>
+                    <li>Generate and safely protect an SSH keypair (<code>.pem</code> file).</li>
+                    <li>Configure inbound firewall rules (Port 22 SSH & Port 80 HTTP).</li>
+                    <li>Connect via SSH terminal and install the Nginx web server.</li>
+                  </ul>
+                </div>
+
+                <div class="info-box">
+                  <div class="info-box-title">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+                    Prerequisites
+                  </div>
+                  <ul style="font-size:0.9rem; line-height:1.6; padding-left:1.1rem; color:var(--color-text-main);">
+                    <li>Cloud account on AWS, Azure, or GCP.</li>
+                    <li>A terminal application (Terminal on macOS/Linux, PowerShell or Git Bash on Windows).</li>
+                    <li>Basic knowledge of command-line terminal commands.</li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="project-steps-section">
+                <h4>Step-by-Step Implementation Guide</h4>
+                <div class="steps-timeline">
+                  <div class="step-item">
+                    <div class="step-number">1</div>
+                    <div class="step-details">
+                      <div class="step-title">Launch the Free-Tier Virtual Machine</div>
+                      <p class="step-desc">
+                        Navigate to <strong>EC2 &rarr; Launch Instances</strong> (AWS) or <strong>Virtual Machines &rarr; Create</strong> (Azure). Select <strong>Ubuntu 22.04 LTS</strong> and the Free-Tier eligible instance size (<code>t2.micro</code> on AWS or <code>Standard_B1s</code> on Azure).
+                      </p>
+                    </div>
+                  </div>
+
+                  <div class="step-item">
+                    <div class="step-number">2</div>
+                    <div class="step-details">
+                      <div class="step-title">Generate and Secure an SSH Key Pair</div>
+                      <p class="step-desc">
+                        Select <em>Create new key pair</em> named <code>cloudlearn-key.pem</code>. Download the private key file. On Unix or macOS terminals, restrict permissions to read-only for your user:
+                      </p>
+                      <div class="code-block-wrapper">
+                        <div class="code-header">
+                          <span>Bash / Terminal</span>
+                          <button type="button" class="code-copy-btn">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+                            Copy Command
+                          </button>
+                        </div>
+                        <pre class="code-content"><code>chmod 400 cloudlearn-key.pem</code></pre>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="step-item">
+                    <div class="step-number">3</div>
+                    <div class="step-details">
+                      <div class="step-title">Configure Security Group Rules</div>
+                      <p class="step-desc">
+                        Add two inbound firewall rules: <br>
+                        • <strong>Type: SSH (Port 22):</strong> Source: <em>My IP</em> (Best practice: restrict SSH access to your current IP). <br>
+                        • <strong>Type: HTTP (Port 80):</strong> Source: <em>0.0.0.0/0 (Anywhere)</em> (To allow public web browsing).
+                      </p>
+                    </div>
+                  </div>
+
+                  <div class="step-item">
+                    <div class="step-number">4</div>
+                    <div class="step-details">
+                      <div class="step-title">Connect via SSH and Install Nginx</div>
+                      <p class="step-desc">
+                        Once the VM reaches <em>Running</em> status, copy its <strong>Public IPv4 Address</strong>. Open your terminal and connect:
+                      </p>
+                      <div class="code-block-wrapper">
+                        <div class="code-header">
+                          <span>Bash / SSH Connection</span>
+                          <button type="button" class="code-copy-btn">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+                            Copy Command
+                          </button>
+                        </div>
+                        <pre class="code-content"><code># Connect to instance
+ssh -i "cloudlearn-key.pem" ubuntu@YOUR_PUBLIC_IP
+
+# Update packages and install Nginx web server
+sudo apt update && sudo apt install -y nginx
+
+# Verify Nginx service is running
+sudo systemctl status nginx</code></pre>
+                      </div>
+                      <p class="step-desc" style="margin-top:0.75rem;">
+                        Open your web browser and navigate to <code>http://YOUR_PUBLIC_IP</code>. You will see the default <strong>"Welcome to nginx!"</strong> landing page rendered directly by your cloud virtual machine.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="info-box" style="margin-bottom:1.5rem;">
+                <div class="info-box-title" style="color:var(--color-success);">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                  Expected Outcome
+                </div>
+                <p style="font-size:0.925rem; color:var(--color-text-main); margin:0;">
+                  A functional Linux server running in an isolated cloud data center, protected by security groups and serving web traffic over port 80.
+                </p>
+              </div>
+
+              <div class="callout callout-warning">
+                <svg class="callout-icon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+                <div>
+                  <div class="callout-title">CRITICAL COST RULE: Terminate When Finished!</div>
+                  <div class="callout-text">
+                    Even under Free Tier limits (750 hours/month on AWS), running multiple virtual machines or leaving high-performance disks allocated will incur charges. <strong>Once you have verified the Nginx web page, go to the console, click Instance State &rarr; Terminate (or Delete on Azure).</strong>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="project-footer">
+              <label class="project-checklist-toggle">
+                <input type="checkbox" class="project-complete-checkbox" data-project-id="project-4">
+                <span class="checkbox-custom">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+                </span>
+                <span>Mark Project 4 as Completed</span>
+              </label>
+              <span style="font-size:0.85rem; color:var(--color-text-muted);">Saved automatically in browser</span>
+            </div>
+          </article>
+
+
+          <!-- PROJECT 5 -->
+          <article class="project-card" id="project-5">
+            <div class="project-header">
+              <div class="project-meta-badges">
+                <span class="project-badge-level badge-intermediate">Level: Intermediate</span>
+                <span class="project-badge-time">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                  Estimated Time: 45 mins
+                </span>
+                <span class="project-badge-time">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+                  Category: Business Continuity & Governance
+                </span>
+              </div>
+              <h2 class="project-title">5. Design an Automated Cloud Backup & Disaster Recovery Plan</h2>
+              <p style="color:var(--color-text-muted); font-size:1.05rem;">
+                Establish quantifiable RPO and RTO goals, configure automated daily snapshot lifecycle policies for cloud storage and databases, and design cross-region disaster recovery replication.
+              </p>
+            </div>
+
+            <div class="project-body">
+              <div class="project-grid-info">
+                <div class="info-box">
+                  <div class="info-box-title">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 14 14"/></svg>
+                    Project Objectives
+                  </div>
+                  <ul style="font-size:0.9rem; line-height:1.6; padding-left:1.1rem; color:var(--color-text-main);">
+                    <li>Define concrete Recovery Point Objective (RPO) and Recovery Time Objective (RTO).</li>
+                    <li>Configure an automated backup lifecycle policy using AWS Backup or Azure Backup.</li>
+                    <li>Enable Cross-Region Replication (CRR) for critical object storage buckets.</li>
+                    <li>Document an actionable, step-by-step restore test procedure.</li>
+                  </ul>
+                </div>
+
+                <div class="info-box">
+                  <div class="info-box-title">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+                    Prerequisites
+                  </div>
+                  <ul style="font-size:0.9rem; line-height:1.6; padding-left:1.1rem; color:var(--color-text-main);">
+                    <li>Cloud account with AWS or Azure console access.</li>
+                    <li>Understanding of cloud storage tiers (Module 07) and High Availability (Module 10).</li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="project-steps-section">
+                <h4>Step-by-Step Implementation Guide</h4>
+                <div class="steps-timeline">
+                  <div class="step-item">
+                    <div class="step-number">1</div>
+                    <div class="step-details">
+                      <div class="step-title">Define RPO & RTO Service Level Agreements (SLAs)</div>
+                      <p class="step-desc">
+                        Establish business targets: <br>
+                        • <strong>RPO = 1 hour:</strong> Maximum acceptable data loss duration. Means backups/snapshots must occur at least hourly for production databases. <br>
+                        • <strong>RTO = 30 minutes:</strong> Maximum acceptable recovery time before services are back online. Requires pre-scripted automation templates (Infrastructure as Code).
+                      </p>
+                    </div>
+                  </div>
+
+                  <div class="step-item">
+                    <div class="step-number">2</div>
+                    <div class="step-details">
+                      <div class="step-title">Configure an Automated Backup Plan (e.g., AWS Backup)</div>
+                      <p class="step-desc">
+                        Open <strong>AWS Backup</strong> (or Azure Backup Center). Create a new Backup Plan named <code>Daily-Production-Policy</code>. Define a schedule: Run daily at 02:00 UTC, transition cold data to Glacier / Archive storage after 30 days, and automatically expire backups after 90 days.
+                      </p>
+                    </div>
+                  </div>
+
+                  <div class="step-item">
+                    <div class="step-number">3</div>
+                    <div class="step-details">
+                      <div class="step-title">Enable Cross-Region Storage Replication</div>
+                      <p class="step-desc">
+                        Select your primary S3 bucket in <code>us-east-1</code> (N. Virginia). Open the <strong>Management</strong> tab and click <strong>Create replication rule</strong>. Set the destination to a paired disaster recovery bucket in <code>us-west-2</code> (Oregon). This protects business assets against a catastrophic regional power grid or telecommunication outage.
+                      </p>
+                    </div>
+                  </div>
+
+                  <div class="step-item">
+                    <div class="step-number">4</div>
+                    <div class="step-details">
+                      <div class="step-title">Conduct a Simulated Recovery Drill</div>
+                      <p class="step-desc">
+                        The true test of a backup plan is the restore process. Simulate accidental data deletion: Delete a non-critical test database table. Navigate to your backup vault, select the latest recovery point, and restore to an alternate test instance. Validate that data integrity matches the pre-deletion state and record the total elapsed restoration time.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="info-box" style="margin-bottom:1.5rem;">
+                <div class="info-box-title" style="color:var(--color-success);">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                  Expected Outcome
+                </div>
+                <p style="font-size:0.925rem; color:var(--color-text-main); margin:0;">
+                  A fully automated, compliant disaster recovery framework ensuring business continuity with verified recovery points and automated cross-region data resilience.
+                </p>
+              </div>
+
+              <div class="callout callout-info">
+                <svg class="callout-icon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
+                <div>
+                  <div class="callout-title">Storage Lifecycle Cost Optimization</div>
+                  <div class="callout-text">
+                    Keeping hundreds of full disk snapshots in active storage is expensive. Always configure <strong>Lifecycle Transitions</strong> that automatically migrate historical backup snapshots to deep archive tiers (such as AWS S3 Glacier Deep Archive at $0.00099 per GB/month).
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="project-footer">
+              <label class="project-checklist-toggle">
+                <input type="checkbox" class="project-complete-checkbox" data-project-id="project-5">
+                <span class="checkbox-custom">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+                </span>
+                <span>Mark Project 5 as Completed</span>
+              </label>
+              <span style="font-size:0.85rem; color:var(--color-text-muted);">Saved automatically in browser</span>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Shared Footer -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="logo" style="color:var(--color-white);">
+            <div class="logo-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z"></path>
+              </svg>
+            </div>
+            <span>CloudLearn</span>
+          </a>
+          <p class="footer-desc">
+            A free, open educational resource dedicated to teaching cloud computing architectures, security, and provider platforms cleanly and accurately.
+          </p>
+        </div>
+
+        <div>
+          <h4 class="footer-heading">Project Guides</h4>
+          <ul class="footer-links">
+            <li><a href="#project-1" class="footer-link">1. Static Website Hosting</a></li>
+            <li><a href="#project-2" class="footer-link">2. Dynamic PaaS Deployment</a></li>
+            <li><a href="#project-3" class="footer-link">3. Architecture Diagramming</a></li>
+            <li><a href="#project-4" class="footer-link">4. Virtual Machine Lab</a></li>
+            <li><a href="#project-5" class="footer-link">5. Backup & DR Strategy</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-heading">Next Steps</h4>
+          <ul class="footer-links">
+            <li><a href="quiz.html" class="footer-link">Take the Cloud Knowledge Quiz</a></li>
+            <li><a href="learn.html" class="footer-link">Review Educational Modules</a></li>
+            <li><a href="providers.html" class="footer-link">Cloud Providers Matrix</a></li>
+            <li><a href="README.md" class="footer-link" target="_blank" rel="noopener">Documentation</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-heading">Safety & Billing</h4>
+          <p style="font-size:0.875rem; line-height:1.6; color:#94a3b8;">
+            All projects are intentionally engineered to run within official free tiers on AWS, Azure, and GCP. Always set a $0.01 budget alert to prevent unexpected billing.
+          </p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>
+          &copy; CloudLearn – Cloud Computing Academy. Built for students, engineers, and cloud enthusiasts.
+        </div>
+        <div class="footer-legal-links">
+          <span>Standards: NIST SP 800-145</span>
+          <span>Open Educational Resource</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <button type="button" class="back-to-top" aria-label="Back to top">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+      <polyline points="18 15 12 9 6 15"></polyline>
+    </svg>
+  </button>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

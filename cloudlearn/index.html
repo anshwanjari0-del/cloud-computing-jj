@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="CloudLearn is a comprehensive, free educational academy for mastering cloud computing fundamentals, architectures, major providers, hands-on projects, and interactive quizzes.">
+  <meta name="keywords" content="cloud computing, AWS, Azure, Google Cloud, IaaS, PaaS, SaaS, virtualization, cloud architecture, FinOps">
+  <meta name="author" content="CloudLearn Academy">
+  <title>CloudLearn – Cloud Computing Academy | Understand Cloud Computing. Build Your Future.</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- Accessibility Skip Link -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- Header / Navigation Bar -->
+  <header class="header" id="site-header">
+    <div class="container nav-container">
+      <a href="index.html" class="logo" aria-label="CloudLearn Home">
+        <div class="logo-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z"></path>
+          </svg>
+        </div>
+        <span>CloudLearn</span>
+        <span class="logo-badge">Academy</span>
+      </a>
+
+      <!-- Desktop Navigation Links -->
+      <nav aria-label="Primary Navigation">
+        <ul class="nav-links">
+          <li><a href="index.html" class="nav-link active">Home</a></li>
+          <li><a href="learn.html" class="nav-link">Learn</a></li>
+          <li><a href="learn.html#service-models" class="nav-link">Services</a></li>
+          <li><a href="providers.html" class="nav-link">Providers</a></li>
+          <li><a href="projects.html" class="nav-link">Projects</a></li>
+          <li><a href="quiz.html" class="nav-link">Quiz</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="learn.html" class="btn btn-primary btn-sm">Start Learning</a>
+        <!-- Mobile Hamburger Button -->
+        <button type="button" class="mobile-toggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="mobile-nav-drawer">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="4" y1="8" x2="20" y2="8"></line>
+            <line x1="4" y1="16" x2="20" y2="16"></line>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Menu -->
+  <div class="mobile-nav" id="mobile-nav-drawer" aria-label="Mobile Navigation">
+    <ul class="mobile-nav-links">
+      <li><a href="index.html" class="mobile-nav-link active">Home</a></li>
+      <li><a href="learn.html" class="mobile-nav-link">Learn Topics</a></li>
+      <li><a href="learn.html#service-models" class="mobile-nav-link">Service Models</a></li>
+      <li><a href="providers.html" class="mobile-nav-link">Cloud Providers</a></li>
+      <li><a href="projects.html" class="mobile-nav-link">Hands-On Projects</a></li>
+      <li><a href="quiz.html" class="mobile-nav-link">Knowledge Quiz</a></li>
+    </ul>
+  </div>
+
+  <!-- Main Content Anchor -->
+  <main id="main-content" class="main-content">
+
+    <!-- Hero Section -->
+    <section class="hero" aria-labelledby="hero-heading">
+      <div class="container">
+        <div class="hero-grid">
+          <div class="hero-content">
+            <div class="hero-badge">
+              <span class="pulse-dot"></span>
+              <span>Open-Access Cloud Curriculum</span>
+            </div>
+            <h1 id="hero-heading" class="hero-title">
+              Understand Cloud Computing. <br>
+              <span class="text-highlight">Build Your Future.</span>
+            </h1>
+            <p class="hero-description">
+              Demystify modern cloud architecture from fundamental virtualization to advanced distributed systems. Learn how global enterprises leverage IaaS, PaaS, SaaS, serverless execution, and multi-cloud resilience to power modern digital products.
+            </p>
+            <div class="hero-cta">
+              <a href="learn.html" class="btn btn-primary btn-lg">
+                <span>Start Learning</span>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                  <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+              </a>
+              <a href="providers.html" class="btn btn-secondary btn-lg">
+                <span>Explore Cloud Providers</span>
+              </a>
+            </div>
+            <div class="hero-trust">
+              <div class="hero-trust-item">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+                <span>Vendor-Neutral Foundation</span>
+              </div>
+              <div class="hero-trust-item">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+                <span>NIST Standards Compliant</span>
+              </div>
+              <div class="hero-trust-item">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+                <span>Beginner to Intermediate</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Hero Cloud Architecture Illustration (Clean Vector SVG) -->
+          <div class="hero-visual">
+            <div class="hero-card-frame">
+              <svg class="hero-cloud-diagram" viewBox="0 0 600 440" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Cloud Computing High-Availability Architecture Diagram">
+                <rect width="600" height="440" rx="16" fill="#F8FAFC"/>
+                
+                <!-- VPC Boundary -->
+                <rect x="24" y="24" width="552" height="392" rx="12" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1.5" stroke-dasharray="4 4"/>
+                <text x="44" y="52" fill="#0F172A" font-family="Inter, sans-serif" font-size="13" font-weight="700">Virtual Private Cloud (VPC / VNet) — 10.0.0.0/16</text>
+                
+                <!-- Client Tier -->
+                <g transform="translate(48, 80)">
+                  <rect width="110" height="70" rx="8" fill="#F0F7FF" stroke="#BFDBFE" stroke-width="1.5"/>
+                  <circle cx="55" cy="30" r="14" fill="#2563EB" opacity="0.15"/>
+                  <path d="M55 24V36M49 30H61" stroke="#2563EB" stroke-width="2" stroke-linecap="round"/>
+                  <text x="55" y="56" fill="#0F172A" font-family="Inter, sans-serif" font-size="11" font-weight="600" text-anchor="middle">Users & Clients</text>
+                </g>
+
+                <!-- Connection Arrow 1 -->
+                <path d="M158 115 H200" stroke="#94A3B8" stroke-width="2" stroke-dasharray="2 2" marker-end="url(#arrow)"/>
+
+                <!-- DNS / CDN / Edge Tier -->
+                <g transform="translate(204, 75)">
+                  <rect width="170" height="80" rx="8" fill="#EFF6FF" stroke="#3B82F6" stroke-width="1.5"/>
+                  <text x="85" y="28" fill="#1E40AF" font-family="Inter, sans-serif" font-size="10" font-weight="700" text-anchor="middle">EDGE & ROUTING</text>
+                  <text x="85" y="48" fill="#0F172A" font-family="Inter, sans-serif" font-size="12" font-weight="600" text-anchor="middle">DNS + Cloud CDN</text>
+                  <text x="85" y="66" fill="#64748B" font-family="Inter, sans-serif" font-size="10" text-anchor="middle">DDoS Shield & Edge Caching</text>
+                </g>
+
+                <!-- Connection Arrow 2 -->
+                <path d="M374 115 H416" stroke="#94A3B8" stroke-width="2" stroke-dasharray="2 2"/>
+
+                <!-- Internet Gateway -->
+                <g transform="translate(420, 80)">
+                  <rect width="130" height="70" rx="8" fill="#F1F5F9" stroke="#CBD5E1" stroke-width="1.5"/>
+                  <text x="65" y="36" fill="#0F172A" font-family="Inter, sans-serif" font-size="11" font-weight="600" text-anchor="middle">Internet Gateway</text>
+                  <text x="65" y="54" fill="#64748B" font-family="Inter, sans-serif" font-size="10" text-anchor="middle">Public Traffic Ingress</text>
+                </g>
+
+                <!-- Public Subnet / Load Balancer -->
+                <g transform="translate(48, 180)">
+                  <rect width="504" height="74" rx="8" fill="#F8FAFC" stroke="#E2E8F0" stroke-width="1.5"/>
+                  <text x="16" y="24" fill="#0284C7" font-family="Inter, sans-serif" font-size="10" font-weight="700">PUBLIC SUBNET (10.0.1.0/24)</text>
+                  <rect x="180" y="24" width="200" height="36" rx="6" fill="#FFFFFF" stroke="#0284C7" stroke-width="1.5"/>
+                  <text x="280" y="47" fill="#0F172A" font-family="Inter, sans-serif" font-size="11" font-weight="700" text-anchor="middle">⚖️ Application Load Balancer</text>
+                </g>
+
+                <!-- Private Subnet / Compute Tier -->
+                <g transform="translate(48, 274)">
+                  <rect width="504" height="126" rx="8" fill="#F1F5F9" stroke="#E2E8F0" stroke-width="1.5"/>
+                  <text x="16" y="22" fill="#D97706" font-family="Inter, sans-serif" font-size="10" font-weight="700">PRIVATE SUBNET (10.0.2.0/24) — AUTO SCALING</text>
+
+                  <!-- VM / Container 1 -->
+                  <g transform="translate(20, 36)">
+                    <rect width="140" height="72" rx="6" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1.2"/>
+                    <text x="70" y="28" fill="#0F172A" font-family="Inter, sans-serif" font-size="11" font-weight="600" text-anchor="middle">App Instance 1</text>
+                    <text x="70" y="46" fill="#64748B" font-family="Inter, sans-serif" font-size="10" text-anchor="middle">VM / Container</text>
+                    <rect x="35" y="54" width="70" height="10" rx="5" fill="#DCFCE7"/>
+                    <text x="70" y="62" fill="#15803D" font-family="Inter, sans-serif" font-size="8" font-weight="700" text-anchor="middle">HEALTHY</text>
+                  </g>
+
+                  <!-- VM / Container 2 -->
+                  <g transform="translate(180, 36)">
+                    <rect width="140" height="72" rx="6" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1.2"/>
+                    <text x="70" y="28" fill="#0F172A" font-family="Inter, sans-serif" font-size="11" font-weight="600" text-anchor="middle">App Instance 2</text>
+                    <text x="70" y="46" fill="#64748B" font-family="Inter, sans-serif" font-size="10" text-anchor="middle">VM / Container</text>
+                    <rect x="35" y="54" width="70" height="10" rx="5" fill="#DCFCE7"/>
+                    <text x="70" y="62" fill="#15803D" font-family="Inter, sans-serif" font-size="8" font-weight="700" text-anchor="middle">HEALTHY</text>
+                  </g>
+
+                  <!-- Managed DB & Object Storage -->
+                  <g transform="translate(340, 36)">
+                    <rect width="144" height="72" rx="6" fill="#FFFFFF" stroke="#2563EB" stroke-width="1.2"/>
+                    <text x="72" y="28" fill="#0F172A" font-family="Inter, sans-serif" font-size="11" font-weight="600" text-anchor="middle">Managed DB & S3</text>
+                    <text x="72" y="46" fill="#64748B" font-family="Inter, sans-serif" font-size="10" text-anchor="middle">Multi-AZ Replicated</text>
+                    <rect x="37" y="54" width="70" height="10" rx="5" fill="#DBEAFE"/>
+                    <text x="72" y="62" fill="#1D4ED8" font-family="Inter, sans-serif" font-size="8" font-weight="700" text-anchor="middle">ENCRYPTED</text>
+                  </g>
+                </g>
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Factual Educational Highlights / Stats Section -->
+    <section class="stats-section" aria-label="Curriculum Highlights">
+      <div class="container">
+        <div class="stats-grid">
+          <div class="stat-card">
+            <div class="stat-number">12</div>
+            <div class="stat-label">Core Modules</div>
+            <div class="stat-subtext">From virtualization basics to FinOps & serverless</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number">5</div>
+            <div class="stat-label">Practical Projects</div>
+            <div class="stat-subtext">Step-by-step guides with zero unnecessary costs</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number">3</div>
+            <div class="stat-label">Major Cloud Platforms</div>
+            <div class="stat-subtext">Factual service mapping across AWS, Azure, & GCP</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number">15</div>
+            <div class="stat-label">Assessment Questions</div>
+            <div class="stat-subtext">Interactive quiz testing real conceptual mastery</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Featured Learning Topics -->
+    <section class="section" id="featured-topics" aria-labelledby="featured-heading">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-tag">Essential Knowledge</div>
+          <h2 id="featured-heading" class="section-title">Core Cloud Pillars</h2>
+          <p class="section-subtitle">
+            Master the foundational building blocks every systems engineer, developer, and architect needs to design scalable distributed applications.
+          </p>
+        </div>
+
+        <div class="grid-3">
+          <!-- Card 1 -->
+          <article class="card">
+            <div class="card-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="2" width="20" height="8" rx="2" ry="2"></rect>
+                <rect x="2" y="14" width="20" height="8" rx="2" ry="2"></rect>
+                <line x1="6" y1="6" x2="6.01" y2="6"></line>
+                <line x1="6" y1="18" x2="6.01" y2="18"></line>
+              </svg>
+            </div>
+            <h3 class="card-title">Service Models: IaaS, PaaS, SaaS</h3>
+            <p class="card-desc">
+              Understand the clear division between infrastructure control, application platforms, and turnkey cloud software, guided by the Shared Responsibility Model.
+            </p>
+            <div class="card-footer">
+              <a href="learn.html#topic-service-models" class="card-link">
+                <span>Explore Service Models</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </a>
+            </div>
+          </article>
+
+          <!-- Card 2 -->
+          <article class="card">
+            <div class="card-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
+                <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
+                <line x1="12" y1="22.08" x2="12" y2="12"></line>
+              </svg>
+            </div>
+            <h3 class="card-title">Virtualization & Containers</h3>
+            <p class="card-desc">
+              Explore how Type-1 & Type-2 hypervisors partition physical bare-metal hardware, and how containerization packages code into lightweight, portable units.
+            </p>
+            <div class="card-footer">
+              <a href="learn.html#topic-virtualization" class="card-link">
+                <span>Explore Containers</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </a>
+            </div>
+          </article>
+
+          <!-- Card 3 -->
+          <article class="card">
+            <div class="card-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+              </svg>
+            </div>
+            <h3 class="card-title">Security & IAM Governance</h3>
+            <p class="card-desc">
+              Dive into the principle of least privilege, Role-Based Access Control (RBAC), multi-factor authentication, and envelope encryption for data at rest and in transit.
+            </p>
+            <div class="card-footer">
+              <a href="learn.html#topic-security" class="card-link">
+                <span>Explore Security & IAM</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </a>
+            </div>
+          </article>
+        </div>
+
+        <div style="text-align: center; margin-top: 3rem;">
+          <a href="learn.html" class="btn btn-outline">View All 12 Educational Modules</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Cloud Providers Overview -->
+    <section class="section section-alt" id="providers-overview" aria-labelledby="providers-heading">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-tag">Market Landscape</div>
+          <h2 id="providers-heading" class="section-title">The "Big Three" Cloud Providers</h2>
+          <p class="section-subtitle">
+            An objective, side-by-side look at the dominant public hyperscalers powering global internet infrastructure.
+          </p>
+        </div>
+
+        <div class="grid-3">
+          <!-- AWS Card -->
+          <article class="card" style="border-top: 4px solid var(--color-aws-accent);">
+            <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom: 1rem;">
+              <h3 style="font-size:1.35rem;">Amazon Web Services</h3>
+              <span style="font-size:0.8rem; font-weight:700; color:var(--color-aws-accent); background:var(--color-aws-bg); padding:0.2rem 0.5rem; border-radius:4px;">Pioneer (2006)</span>
+            </div>
+            <p class="card-desc">
+              The first modern hyperscaler with the deepest and most mature breadth of managed cloud services, spanning EC2, S3, RDS, Lambda, and thousands of enterprise integrations worldwide.
+            </p>
+            <ul style="margin-bottom:1.5rem; font-size:0.9rem; color:var(--color-text-muted); list-style:none; padding:0; display:flex; flex-direction:column; gap:0.35rem;">
+              <li>• <strong>Key Strengths:</strong> Market longevity, extensive service breadth, robust partner network</li>
+              <li>• <strong>Compute Benchmark:</strong> Amazon EC2</li>
+              <li>• <strong>Object Store Benchmark:</strong> Amazon S3</li>
+            </ul>
+            <div class="card-footer">
+              <a href="providers.html#aws-deep-dive" class="card-link">
+                <span>View AWS Breakdown</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </a>
+            </div>
+          </article>
+
+          <!-- Azure Card -->
+          <article class="card" style="border-top: 4px solid var(--color-azure-accent);">
+            <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom: 1rem;">
+              <h3 style="font-size:1.35rem;">Microsoft Azure</h3>
+              <span style="font-size:0.8rem; font-weight:700; color:var(--color-azure-accent); background:var(--color-azure-bg); padding:0.2rem 0.5rem; border-radius:4px;">Enterprise Focus (2010)</span>
+            </div>
+            <p class="card-desc">
+              Unmatched hybrid cloud connectivity and enterprise integration with Microsoft Entra ID (Active Directory), Windows Server environments, SQL Server, and Microsoft 365 suites.
+            </p>
+            <ul style="margin-bottom:1.5rem; font-size:0.9rem; color:var(--color-text-muted); list-style:none; padding:0; display:flex; flex-direction:column; gap:0.35rem;">
+              <li>• <strong>Key Strengths:</strong> Enterprise hybrid cloud, .NET / Windows harmony, Azure Arc</li>
+              <li>• <strong>Compute Benchmark:</strong> Azure Virtual Machines</li>
+              <li>• <strong>Object Store Benchmark:</strong> Azure Blob Storage</li>
+            </ul>
+            <div class="card-footer">
+              <a href="providers.html#azure-deep-dive" class="card-link">
+                <span>View Azure Breakdown</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </a>
+            </div>
+          </article>
+
+          <!-- Google Cloud Card -->
+          <article class="card" style="border-top: 4px solid var(--color-gcp-accent);">
+            <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom: 1rem;">
+              <h3 style="font-size:1.35rem;">Google Cloud</h3>
+              <span style="font-size:0.8rem; font-weight:700; color:var(--color-gcp-accent); background:var(--color-gcp-bg); padding:0.2rem 0.5rem; border-radius:4px;">Data & K8s (2008/2011)</span>
+            </div>
+            <p class="card-desc">
+              Industry leader in distributed container orchestration (originator of Kubernetes), real-time big data processing with BigQuery, and enterprise artificial intelligence with Vertex AI.
+            </p>
+            <ul style="margin-bottom:1.5rem; font-size:0.9rem; color:var(--color-text-muted); list-style:none; padding:0; display:flex; flex-direction:column; gap:0.35rem;">
+              <li>• <strong>Key Strengths:</strong> Kubernetes (GKE), BigQuery analytics, developer experience</li>
+              <li>• <strong>Compute Benchmark:</strong> Compute Engine & Cloud Run</li>
+              <li>• <strong>Object Store Benchmark:</strong> Google Cloud Storage</li>
+            </ul>
+            <div class="card-footer">
+              <a href="providers.html#gcp-deep-dive" class="card-link">
+                <span>View Google Cloud Breakdown</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </a>
+            </div>
+          </article>
+        </div>
+
+        <div style="text-align: center; margin-top: 2.5rem;">
+          <a href="providers.html" class="btn btn-primary">Compare All Features & Service Matrix</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Beginner Learning Roadmap Section -->
+    <section class="section" id="roadmap" aria-labelledby="roadmap-heading">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-tag">Learning Journey</div>
+          <h2 id="roadmap-heading" class="section-title">Beginner to Practitioner Roadmap</h2>
+          <p class="section-subtitle">
+            Follow this structured 5-stage progression to systematically build practical, industry-aligned cloud competence.
+          </p>
+        </div>
+
+        <div class="roadmap-container">
+          <!-- Step 1 -->
+          <div class="roadmap-step">
+            <div class="roadmap-marker">1</div>
+            <div class="roadmap-content">
+              <div class="roadmap-badge">Phase 1: Foundations</div>
+              <h3 class="roadmap-title">Cloud Core Concepts & Economic Models</h3>
+              <p class="roadmap-desc">
+                Learn why businesses transitioned from on-premises data centers to the cloud. Master the NIST 5 essential characteristics, CapEx vs OpEx cost models, and the difference between public, private, and hybrid environments.
+              </p>
+              <div class="roadmap-tags">
+                <span class="roadmap-tag">NIST Standards</span>
+                <span class="roadmap-tag">Pay-as-you-go</span>
+                <span class="roadmap-tag">CapEx vs OpEx</span>
+                <span class="roadmap-tag">High Availability</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Step 2 -->
+          <div class="roadmap-step">
+            <div class="roadmap-marker">2</div>
+            <div class="roadmap-content">
+              <div class="roadmap-badge">Phase 2: Core Infrastructure</div>
+              <h3 class="roadmap-title">Virtual Networking, Compute & Storage</h3>
+              <p class="roadmap-desc">
+                Understand how isolated networks (VPC/VNets), subnets, routing tables, and firewalls isolate workloads. Compare Virtual Machines against lightweight containers and learn when to choose Object, Block, or File storage.
+              </p>
+              <div class="roadmap-tags">
+                <span class="roadmap-tag">VPC / Subnets</span>
+                <span class="roadmap-tag">EC2 & VMs</span>
+                <span class="roadmap-tag">S3 Object Storage</span>
+                <span class="roadmap-tag">EBS Block Storage</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Step 3 -->
+          <div class="roadmap-step">
+            <div class="roadmap-marker">3</div>
+            <div class="roadmap-content">
+              <div class="roadmap-badge">Phase 3: Resilient Architecture</div>
+              <h3 class="roadmap-title">Scalability, Load Balancing & High Availability</h3>
+              <p class="roadmap-desc">
+                Design fault-tolerant distributed systems. Implement horizontal auto-scaling, Multi-AZ deployments, application load balancers, health checks, and database replication for disaster recovery.
+              </p>
+              <div class="roadmap-tags">
+                <span class="roadmap-tag">Horizontal Scaling</span>
+                <span class="roadmap-tag">Load Balancers</span>
+                <span class="roadmap-tag">Multi-AZ Redundancy</span>
+                <span class="roadmap-tag">RPO & RTO</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Step 4 -->
+          <div class="roadmap-step">
+            <div class="roadmap-marker">4</div>
+            <div class="roadmap-content">
+              <div class="roadmap-badge">Phase 4: Governance & Modern Cloud</div>
+              <h3 class="roadmap-title">Security, IAM, Serverless & FinOps</h3>
+              <p class="roadmap-desc">
+                Enforce the Shared Responsibility Model. Create least-privilege IAM policies, manage encryption keys, explore event-driven serverless computing (FaaS), and implement FinOps cost tracking to eliminate cloud waste.
+              </p>
+              <div class="roadmap-tags">
+                <span class="roadmap-tag">IAM Policies</span>
+                <span class="roadmap-tag">KMS Encryption</span>
+                <span class="roadmap-tag">AWS Lambda / Cloud Run</span>
+                <span class="roadmap-tag">FinOps Budgets</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Step 5 -->
+          <div class="roadmap-step">
+            <div class="roadmap-marker">5</div>
+            <div class="roadmap-content">
+              <div class="roadmap-badge">Phase 5: Hands-On Application</div>
+              <h3 class="roadmap-title">Practical Projects & Knowledge Validation</h3>
+              <p class="roadmap-desc">
+                Put theory into practice by hosting static sites, provisioning Linux virtual machines, drafting professional multi-tier architecture diagrams, and verifying your readiness with our interactive 15-question quiz.
+              </p>
+              <div class="roadmap-tags">
+                <span class="roadmap-tag">Static Site Hosting</span>
+                <span class="roadmap-tag">VM Web Server Setup</span>
+                <span class="roadmap-tag">Architecture Diagrams</span>
+                <span class="roadmap-tag">Knowledge Quiz</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Call to Action Banner -->
+    <section class="section section-subtle" style="text-align: center;" aria-label="Start Learning Banner">
+      <div class="container">
+        <h2 style="margin-bottom: 1rem;">Ready to Begin Your Cloud Computing Journey?</h2>
+        <p style="max-width: 600px; margin: 0 auto 2rem auto; color: var(--color-text-main);">
+          Start with our comprehensive topic guides, proceed to guided beginner projects, and test your knowledge with the assessment quiz.
+        </p>
+        <div style="display:flex; justify-content:center; gap:1rem; flex-wrap:wrap;">
+          <a href="learn.html" class="btn btn-primary btn-lg">Explore All Topics</a>
+          <a href="quiz.html" class="btn btn-secondary btn-lg">Take the Cloud Quiz</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="logo" style="color:var(--color-white);">
+            <div class="logo-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z"></path>
+              </svg>
+            </div>
+            <span>CloudLearn</span>
+          </a>
+          <p class="footer-desc">
+            A free, open educational resource dedicated to teaching cloud computing architectures, security, and provider platforms cleanly and accurately.
+          </p>
+        </div>
+
+        <div>
+          <h4 class="footer-heading">Learning Curriculum</h4>
+          <ul class="footer-links">
+            <li><a href="learn.html" class="footer-link">All 12 Cloud Topics</a></li>
+            <li><a href="learn.html#service-models" class="footer-link">Service Models (IaaS, PaaS, SaaS)</a></li>
+            <li><a href="learn.html#topic-security" class="footer-link">Cloud Security & IAM</a></li>
+            <li><a href="learn.html#topic-serverless" class="footer-link">Serverless Architecture</a></li>
+            <li><a href="learn.html#topic-cost" class="footer-link">FinOps & Cost Management</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-heading">Cloud Providers</h4>
+          <ul class="footer-links">
+            <li><a href="providers.html#aws-deep-dive" class="footer-link">Amazon Web Services (AWS)</a></li>
+            <li><a href="providers.html#azure-deep-dive" class="footer-link">Microsoft Azure</a></li>
+            <li><a href="providers.html#gcp-deep-dive" class="footer-link">Google Cloud Platform (GCP)</a></li>
+            <li><a href="providers.html#service-matrix" class="footer-link">Cross-Provider Service Matrix</a></li>
+            <li><a href="providers.html#infrastructure" class="footer-link">Regions & Availability Zones</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-heading">Practice & Validation</h4>
+          <ul class="footer-links">
+            <li><a href="projects.html" class="footer-link">Hands-On Projects</a></li>
+            <li><a href="projects.html#project-1" class="footer-link">Static Website Hosting Guide</a></li>
+            <li><a href="projects.html#project-4" class="footer-link">Virtual Machine Lab</a></li>
+            <li><a href="quiz.html" class="footer-link">Interactive Knowledge Quiz</a></li>
+            <li><a href="README.md" class="footer-link" target="_blank" rel="noopener">Documentation & Setup</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>
+          &copy; CloudLearn – Cloud Computing Academy. Built for students, engineers, and cloud enthusiasts.
+        </div>
+        <div class="footer-legal-links">
+          <span>Standards: NIST SP 800-145</span>
+          <span>Open Educational Resource</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to Top Button -->
+  <button type="button" class="back-to-top" aria-label="Back to top">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+      <polyline points="18 15 12 9 6 15"></polyline>
+    </svg>
+  </button>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
